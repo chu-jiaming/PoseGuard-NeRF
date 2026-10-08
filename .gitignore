@@ -1,0 +1,9 @@
+# Generated Python caches
+__pycache__/
+*.py[cod]
+
+# Large runtime artifacts; selected configs and small reports are explicitly tracked.
+/outputs/
+/logs/
+/results/
+/.sv100_pipeline.lock

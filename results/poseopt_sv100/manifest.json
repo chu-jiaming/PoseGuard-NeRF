@@ -1,0 +1,106 @@
+{
+  "data": {
+    "SV100-GT": {
+      "transforms_train.json": "82d46cfbd405d7da8562b6fa75b6fb0631a3f941adf66f0c023acb8bf9ea273a",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64"
+    },
+    "SV100-T0.5": {
+      "transforms_train.json": "7cde4c785bb22333c009655fef8c709f04e5b0b21ca0885d27942591017282ab",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "d0fa0d3f4dec78a429d0261a61eef98c0f3718af3c5bfb7ad0e57f8d113b03cf"
+    },
+    "SV100-T1": {
+      "transforms_train.json": "9a4be23a5002ce12b5a9b5d496806a6cf43cd3b5f07fcc16d53cc14eaec13701",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "2068468d287c979933803f554076e66e61ab1094bb902ffd52663096b9656530"
+    },
+    "SV100-T2": {
+      "transforms_train.json": "03d590a3ce935234c419d19703838d911deaf0d1cb38fbc680c9c9a598f10013",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "6e97924d4a13e9a92ec9982b6a2d72ee745fb1b5e5ace9fd2f8930d785950a11"
+    },
+    "SV100-T5": {
+      "transforms_train.json": "d49866ed0acc66f33ae721568530b6542afda3f3b8feeba7bceddfe9939eafd9",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "7e0eb043c631963116b5e7393f35ca8a8fa9d07e9c9a2ccf50d49fc993e800af"
+    },
+    "SV100-R0.5": {
+      "transforms_train.json": "f31d9774d2bfabf807b3d892499e28d499a31f707190d608e8b0cdc9f40d4db1",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "d304fc90ed323a39e62cc8346b9b9542681a2d25e92c302176890a87524662f3"
+    },
+    "SV100-R1": {
+      "transforms_train.json": "460253ec1248cbca94887a44feb3351f7354e3206a17105c3634050e2a8a9f13",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "4b9b9f3058686b6a6abe7a7bf543a628080c60f06e1136ad14028c4e045ca9af"
+    },
+    "SV100-R2": {
+      "transforms_train.json": "0fd4dffbdfa1369ff3637a7a4f0750b9e5677421e5b763193209d3dcf6cba281",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "e56c4abb767214665d81c36c954bd0f0d7c6b06d72ade47d0ea816fd2cc47cb7"
+    },
+    "SV100-R5": {
+      "transforms_train.json": "b20e27be9f5f87479948b28b40ba31dd76ea0a36730ed06a41e115db93feb686",
+      "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+      "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+      "pose_noise_metadata.json": "fb4d7592d7cc11e383dfe8c5e447d77df3845366d4a21920b8442547d7722ae2"
+    }
+  },
+  "baseline": {
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml": "543dd4bc339f39d6a03efa70d0d6e1caa336da8877d4db364c8af1fc84781bd6",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt": "c3d47101d4df1e2039ba3aa1667a7c1c98c7d12fb2e1b5d89cb1b8d31c785a6e",
+    "/root/workspace/poseguard-nerf/results/SV100-GT/metrics.json": "6dc54056d3b07b0fe4d3156b33c10b7c9316b36f730236ab3cc3dfa2f47d4c6c",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/config.yml": "63131410d086c04a2a33764ad7c97fe63f706311b0bde030057462d36f2414de",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/nerfstudio_models/step-000029999.ckpt": "ed652e8882954581399c47eb0058f496f1ae3c7488729bd35fe76893470f90a3",
+    "/root/workspace/poseguard-nerf/results/SV100-T0.5/metrics.json": "445f64d42ca4fc03fdcca85d0c1241b17f69108c184f1e2bbac48519a1903ab8",
+    "/root/workspace/poseguard-nerf/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/config.yml": "edf9fa4a61567ea9553408a08ad9b4b7df94984fe37a0f19e4fbade03dc4bf3f",
+    "/root/workspace/poseguard-nerf/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/nerfstudio_models/step-000029999.ckpt": "c89184735f4f52391069b77e7ddbb457f448e5ba897666e301fa3b7d2acb276f",
+    "/root/workspace/poseguard-nerf/results/SV100-T1/metrics.json": "2ed67f0c6581f4754b158d6ab55f5dd4c51f3af3515d690c48dbd0176798d598",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/config.yml": "db48cdb56cb4dd8b376e3b43f382423c8d45e9d9303573860c1bfa4586a9a1c0",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/nerfstudio_models/step-000029999.ckpt": "3a5eb4d5e29291474d72dc6584fcec9206ed0f2a8a45f533bb3e7ad64a8a2cc1",
+    "/root/workspace/poseguard-nerf/results/SV100-T2/metrics.json": "b4049590ac3249ed7c34462d3d4c8c93c9bbcb890bcaaaf6beada0f8d1bcbb44",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/config.yml": "7d5e7bf17cde5c824c4ca1b8761d5f8e4b33703eba878c6c59c6428f563f5779",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/nerfstudio_models/step-000029999.ckpt": "89134af0a04380cea1744aa189003cc7a2b070a0ab636b2db8508254992b1795",
+    "/root/workspace/poseguard-nerf/results/SV100-T5/metrics.json": "e28033c94be16c3b6097f94c1c9b068078cc57f7588bdce7224bf78d2963c30b",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/config.yml": "30c9b909c635d04acbd33a6dc8ff644242a37bc6b261536cb26af57b3ef8223a",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/nerfstudio_models/step-000029999.ckpt": "b09d06025737c765dea92f92d1754e7f38c9e8e5e95a1e4344d7fc3d296de3ee",
+    "/root/workspace/poseguard-nerf/results/SV100-R0.5/metrics.json": "54777656c886b0f546569910f793c3141bf0dc45420a8c5435d41a765ed7c3ea",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/config.yml": "e576e86c57928e0956695c51e1bf8cf614d8c088946e03c668a801ebdd352431",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/nerfstudio_models/step-000029999.ckpt": "501c91ffe46586af96d73f65f7ba4b2076367baebca8d76fade5e7e5abbf3ce6",
+    "/root/workspace/poseguard-nerf/results/SV100-R1/metrics.json": "09812fa1a70f3bbf78eb5c146645592532300252ff9bde3f1a5054db34692880",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/config.yml": "13671b5d9e9929203b7ac0993b3a46f02c01cf77af57d87fd1b3eb96b9d6678b",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/nerfstudio_models/step-000029999.ckpt": "376282866286b1647434ed0bb999be36dcecd1cbabd6a24a2040090537fe8483",
+    "/root/workspace/poseguard-nerf/results/SV100-R2/metrics.json": "6079fc9478c5c6db6f37ca26767b51579b7e2a466ad7dc39cf3d5af4a3f0385a",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/config.yml": "52290d9ac1b5671db35f8fd7c0a800e479130dc70a4bb2e6b889fe8a2456f3e9",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/nerfstudio_models/step-000029999.ckpt": "bbc136a1cd4e7238e46f90086d7e194e6f7af1fb46de6722b101b8a361616506",
+    "/root/workspace/poseguard-nerf/results/SV100-R5/metrics.json": "7141aba9193b2e60b8998def267b86f390e19dbac514c2288ba1eae66911627e"
+  },
+  "code": {
+    "poseguard/__init__.py": "919d63a41c03f156edd989a6a738fcd888da82fc7043a595811678bdcc415f8c",
+    "poseguard/geometry.py": "6b2b76a59bc336c7e6a22391efa370af03cea2a645b58394a239ccd275191f25",
+    "poseguard/methods.py": "baebd82fb9deb06b6d060b11a6cbb488a0cc44cdb904a9487419f12c0d413680",
+    "poseguard/worker.py": "bd2959d80c7fb74258bb446ac35697a199ce2281b35964fbf6ea4fb76fda5323",
+    "scripts/pose_optimization_pipeline.py": "3b50ee56c3ec49c332af9b870c5b8e64b9ea494a9b768c064df0ccf6ed7e2e8c",
+    "scripts/run_pose_optimization_pipeline.sh": "4460559ab6c35e7998b7d6fbd4e0606c38983f0b4dd197172c07f4ce90791031",
+    "scripts/sv100_pipeline.py": "9e8a86cfd0788299b51273c1e68015879e40e5673c77dfa7be95b8931c0123cc"
+  },
+  "python": "3.8.10 (default, Jun  4 2021, 15:09:15) \n[GCC 7.5.0]",
+  "nerfstudio": "1.1.5",
+  "torch": "2.1.2+cu118",
+  "packages": {
+    "numpy": "1.24.2",
+    "scipy": "1.10.1",
+    "Pillow": "10.4.0",
+    "matplotlib": "3.7.5",
+    "torchmetrics": "1.2.0",
+    "tyro": "1.0.16"
+  }
+}

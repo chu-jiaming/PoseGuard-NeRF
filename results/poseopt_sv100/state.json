@@ -1,0 +1,360 @@
+{
+  "status": "SUCCESS",
+  "start": "2026-10-01T10:37:10.555556+00:00",
+  "settings": {
+    "steps": 30000,
+    "interval": 1000,
+    "smoke": false,
+    "order": [
+      "naive/SV100-GT",
+      "naive/SV100-T0.5",
+      "naive/SV100-T1",
+      "naive/SV100-T2",
+      "naive/SV100-T5",
+      "naive/SV100-R0.5",
+      "naive/SV100-R1",
+      "naive/SV100-R2",
+      "naive/SV100-R5",
+      "camp/SV100-GT",
+      "camp/SV100-T0.5",
+      "camp/SV100-T1",
+      "camp/SV100-T2",
+      "camp/SV100-T5",
+      "camp/SV100-R0.5",
+      "camp/SV100-R1",
+      "camp/SV100-R2",
+      "camp/SV100-R5"
+    ]
+  },
+  "experiments": {
+    "naive/SV100-GT": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001"
+      ],
+      "start": "2026-10-01T10:37:10.978358+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001",
+      "metrics": {
+        "psnr": 17.908571243286133,
+        "ssim": 0.7507554292678833,
+        "lpips": 0.14861881732940674
+      },
+      "end": "2026-10-01T13:32:28.352359+00:00"
+    },
+    "naive/SV100-T0.5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001"
+      ],
+      "start": "2026-10-01T13:32:33.130226+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001",
+      "metrics": {
+        "psnr": 17.72048568725586,
+        "ssim": 0.75315260887146,
+        "lpips": 0.14314380288124084
+      },
+      "end": "2026-10-01T16:27:19.905117+00:00"
+    },
+    "naive/SV100-T1": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001"
+      ],
+      "start": "2026-10-01T16:27:24.575653+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001",
+      "metrics": {
+        "psnr": 15.900127410888672,
+        "ssim": 0.7369078993797302,
+        "lpips": 0.1968562752008438
+      },
+      "end": "2026-10-01T19:22:31.183756+00:00"
+    },
+    "naive/SV100-T2": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001"
+      ],
+      "start": "2026-10-01T19:22:36.281454+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001",
+      "metrics": {
+        "psnr": 16.844139099121094,
+        "ssim": 0.747525691986084,
+        "lpips": 0.1714111864566803
+      },
+      "end": "2026-10-01T22:18:04.194994+00:00"
+    },
+    "naive/SV100-T5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001"
+      ],
+      "start": "2026-10-01T22:18:09.542817+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001",
+      "metrics": {
+        "psnr": 17.533849716186523,
+        "ssim": 0.7530051469802856,
+        "lpips": 0.15946823358535767
+      },
+      "end": "2026-10-02T01:13:01.780328+00:00"
+    },
+    "naive/SV100-R0.5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001"
+      ],
+      "start": "2026-10-02T01:13:07.397824+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001",
+      "metrics": {
+        "psnr": 20.562286376953125,
+        "ssim": 0.793068528175354,
+        "lpips": 0.11532619595527649
+      },
+      "end": "2026-10-02T04:08:16.277857+00:00"
+    },
+    "naive/SV100-R1": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001"
+      ],
+      "start": "2026-10-02T04:08:22.145676+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001",
+      "metrics": {
+        "psnr": 15.528212547302246,
+        "ssim": 0.7332556247711182,
+        "lpips": 0.20048755407333374
+      },
+      "end": "2026-10-02T07:03:11.955328+00:00"
+    },
+    "naive/SV100-R2": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001"
+      ],
+      "start": "2026-10-02T07:03:18.258937+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001",
+      "metrics": {
+        "psnr": 16.13628387451172,
+        "ssim": 0.7383190989494324,
+        "lpips": 0.1885874718427658
+      },
+      "end": "2026-10-02T09:58:05.733225+00:00"
+    },
+    "naive/SV100-R5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001"
+      ],
+      "start": "2026-10-02T11:57:43.362391+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001",
+      "metrics": {
+        "psnr": 17.4700870513916,
+        "ssim": 0.7498352527618408,
+        "lpips": 0.16173501312732697
+      },
+      "end": "2026-10-02T13:15:21.742151+00:00"
+    },
+    "camp/SV100-GT": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001"
+      ],
+      "start": "2026-10-02T13:15:35.414206+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001",
+      "metrics": {
+        "psnr": 19.900388717651367,
+        "ssim": 0.7828549742698669,
+        "lpips": 0.12358926236629486
+      },
+      "end": "2026-10-02T16:10:55.896674+00:00"
+    },
+    "camp/SV100-T0.5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001"
+      ],
+      "start": "2026-10-02T16:11:02.855798+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001",
+      "metrics": {
+        "psnr": 16.106420516967773,
+        "ssim": 0.732803463935852,
+        "lpips": 0.18781548738479614
+      },
+      "end": "2026-10-02T19:06:06.221208+00:00"
+    },
+    "camp/SV100-T1": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001"
+      ],
+      "start": "2026-10-02T19:06:13.076383+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001",
+      "metrics": {
+        "psnr": 16.826087951660156,
+        "ssim": 0.7462030053138733,
+        "lpips": 0.17205750942230225
+      },
+      "end": "2026-10-02T22:01:12.998515+00:00"
+    },
+    "camp/SV100-T2": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001"
+      ],
+      "start": "2026-10-02T22:01:19.886800+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001",
+      "metrics": {
+        "psnr": 19.009138107299805,
+        "ssim": 0.7670914530754089,
+        "lpips": 0.13473717868328094
+      },
+      "end": "2026-10-03T00:56:08.504023+00:00"
+    },
+    "camp/SV100-T5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001"
+      ],
+      "start": "2026-10-03T00:56:15.359980+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001",
+      "metrics": {
+        "psnr": 19.71722412109375,
+        "ssim": 0.7721560597419739,
+        "lpips": 0.1357286274433136
+      },
+      "end": "2026-10-03T03:51:19.776331+00:00"
+    },
+    "camp/SV100-R0.5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001"
+      ],
+      "start": "2026-10-03T03:51:26.778214+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001",
+      "metrics": {
+        "psnr": 18.255605697631836,
+        "ssim": 0.7683975696563721,
+        "lpips": 0.1436251699924469
+      },
+      "end": "2026-10-03T06:46:38.716290+00:00"
+    },
+    "camp/SV100-R1": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001"
+      ],
+      "start": "2026-10-03T06:46:45.740649+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001",
+      "metrics": {
+        "psnr": 16.700990676879883,
+        "ssim": 0.7418728470802307,
+        "lpips": 0.16722877323627472
+      },
+      "end": "2026-10-03T09:41:44.187433+00:00"
+    },
+    "camp/SV100-R2": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001"
+      ],
+      "start": "2026-10-03T09:41:51.212651+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001",
+      "metrics": {
+        "psnr": 19.151582717895508,
+        "ssim": 0.763823390007019,
+        "lpips": 0.13089749217033386
+      },
+      "end": "2026-10-03T12:36:59.102613+00:00"
+    },
+    "camp/SV100-R5": {
+      "status": "SUCCESS",
+      "attempts": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001"
+      ],
+      "start": "2026-10-03T12:37:06.004707+00:00",
+      "error": null,
+      "stage": "complete",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "attempt": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001",
+      "metrics": {
+        "psnr": 15.084413528442383,
+        "ssim": 0.7246410846710205,
+        "lpips": 0.22007404267787933
+      },
+      "end": "2026-10-03T15:32:05.519547+00:00"
+    }
+  },
+  "pid": 57997,
+  "last_start": "2026-10-02T11:57:42.888774+00:00",
+  "baseline_render_errors": [],
+  "updated": "2026-10-03T15:45:00.567142+00:00",
+  "end": "2026-10-03T15:45:00.567110+00:00"
+}

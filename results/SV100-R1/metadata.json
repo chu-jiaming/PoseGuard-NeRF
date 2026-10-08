@@ -1,0 +1,17 @@
+{
+  "case": "SV100-R1",
+  "perturbation_type": "rotation",
+  "perturbation_magnitude": 1.0,
+  "dataset_path": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+  "training_views": 100,
+  "nerfstudio_version": "1.1.5",
+  "max_iterations": 30000,
+  "output_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344",
+  "config_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/config.yml",
+  "checkpoint_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/nerfstudio_models/step-000029999.ckpt",
+  "evaluation_result": "/root/workspace/poseguard-nerf/results/SV100-R1/metrics.json",
+  "status": "SUCCESS",
+  "psnr": 17.114395141601562,
+  "ssim": 0.7534263134002686,
+  "lpips": 0.31077659130096436
+}

@@ -1,0 +1,55 @@
+{
+  "SV100-GT": {
+    "transforms_train.json": "82d46cfbd405d7da8562b6fa75b6fb0631a3f941adf66f0c023acb8bf9ea273a",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64"
+  },
+  "SV100-T0.5": {
+    "transforms_train.json": "7cde4c785bb22333c009655fef8c709f04e5b0b21ca0885d27942591017282ab",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "d0fa0d3f4dec78a429d0261a61eef98c0f3718af3c5bfb7ad0e57f8d113b03cf"
+  },
+  "SV100-T1": {
+    "transforms_train.json": "9a4be23a5002ce12b5a9b5d496806a6cf43cd3b5f07fcc16d53cc14eaec13701",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "2068468d287c979933803f554076e66e61ab1094bb902ffd52663096b9656530"
+  },
+  "SV100-T2": {
+    "transforms_train.json": "03d590a3ce935234c419d19703838d911deaf0d1cb38fbc680c9c9a598f10013",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "6e97924d4a13e9a92ec9982b6a2d72ee745fb1b5e5ace9fd2f8930d785950a11"
+  },
+  "SV100-T5": {
+    "transforms_train.json": "d49866ed0acc66f33ae721568530b6542afda3f3b8feeba7bceddfe9939eafd9",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "7e0eb043c631963116b5e7393f35ca8a8fa9d07e9c9a2ccf50d49fc993e800af"
+  },
+  "SV100-R0.5": {
+    "transforms_train.json": "f31d9774d2bfabf807b3d892499e28d499a31f707190d608e8b0cdc9f40d4db1",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "d304fc90ed323a39e62cc8346b9b9542681a2d25e92c302176890a87524662f3"
+  },
+  "SV100-R1": {
+    "transforms_train.json": "460253ec1248cbca94887a44feb3351f7354e3206a17105c3634050e2a8a9f13",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "4b9b9f3058686b6a6abe7a7bf543a628080c60f06e1136ad14028c4e045ca9af"
+  },
+  "SV100-R2": {
+    "transforms_train.json": "0fd4dffbdfa1369ff3637a7a4f0750b9e5677421e5b763193209d3dcf6cba281",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "e56c4abb767214665d81c36c954bd0f0d7c6b06d72ade47d0ea816fd2cc47cb7"
+  },
+  "SV100-R5": {
+    "transforms_train.json": "b20e27be9f5f87479948b28b40ba31dd76ea0a36730ed06a41e115db93feb686",
+    "transforms_val.json": "7100ba06021772ff6a0637246666ebe4dc15175a3d092de628486489d459dde1",
+    "transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "pose_noise_metadata.json": "fb4d7592d7cc11e383dfe8c5e447d77df3845366d4a21920b8442547d7722ae2"
+  }
+}

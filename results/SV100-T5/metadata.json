@@ -1,0 +1,17 @@
+{
+  "case": "SV100-T5",
+  "perturbation_type": "translation",
+  "perturbation_magnitude": 0.05,
+  "dataset_path": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+  "training_views": 100,
+  "nerfstudio_version": "1.1.5",
+  "max_iterations": 30000,
+  "output_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952",
+  "config_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/config.yml",
+  "checkpoint_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/nerfstudio_models/step-000029999.ckpt",
+  "evaluation_result": "/root/workspace/poseguard-nerf/results/SV100-T5/metrics.json",
+  "status": "SUCCESS",
+  "psnr": 14.144984245300293,
+  "ssim": 0.7271924018859863,
+  "lpips": 0.38807252049446106
+}

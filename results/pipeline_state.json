@@ -1,0 +1,21 @@
+{
+  "status": "SUCCESS",
+  "start": "2026-09-30T06:11:07.869169+00:00",
+  "pid": 4625,
+  "nerfstudio_version": "1.1.5",
+  "order": [
+    "SV100-GT",
+    "SV100-T0.5",
+    "SV100-T1",
+    "SV100-T2",
+    "SV100-T5",
+    "SV100-R0.5",
+    "SV100-R1",
+    "SV100-R2",
+    "SV100-R5"
+  ],
+  "case": "SV100-R5",
+  "stage": "complete",
+  "config_path": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/config.yml",
+  "end": "2026-10-01T08:00:27.115611+00:00"
+}

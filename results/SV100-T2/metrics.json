@@ -1,0 +1,21 @@
+{
+  "experiment_name": "lego_sv100_tnoise_2pct",
+  "method_name": "vanilla-nerf",
+  "checkpoint": "outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/nerfstudio_models/step-000029999.ckpt",
+  "results": {
+    "psnr": 17.410005569458008,
+    "psnr_std": 0.9510374069213867,
+    "coarse_psnr": 17.582387924194336,
+    "coarse_psnr_std": 0.9175124764442444,
+    "fine_psnr": 17.410005569458008,
+    "fine_psnr_std": 0.9510374069213867,
+    "fine_ssim": 0.7545003890991211,
+    "fine_ssim_std": 0.03390498086810112,
+    "fine_lpips": 0.3104111850261688,
+    "fine_lpips_std": 0.0271200779825449,
+    "num_rays_per_sec": 28103.84765625,
+    "num_rays_per_sec_std": 39.50541687011719,
+    "fps": 0.043912261724472046,
+    "fps_std": 6.172707071527839e-05
+  }
+}
