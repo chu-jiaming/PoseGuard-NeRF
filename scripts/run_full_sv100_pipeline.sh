@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
-cd /root/workspace/poseguard-nerf
-export PATH=/root/miniconda3/bin:$PATH
+ROOT="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT"
 export PYTHONUNBUFFERED=1
 exec 9>.sv100_pipeline.lock
 flock -n 9 || { echo 'FAILED: another formal pipeline owns the lock'; exit 1; }

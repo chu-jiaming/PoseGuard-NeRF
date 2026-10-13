@@ -2,8 +2,8 @@
 __pycache__/
 *.py[cod]
 
-# Large runtime artifacts; selected configs and small reports are explicitly tracked.
-/outputs/
-/logs/
-/results/
+# Runtime artifacts; publish selected ordinary-file snapshots under artifacts/.
+/outputs
+/logs
+/results
 /.sv100_pipeline.lock

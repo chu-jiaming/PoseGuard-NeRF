@@ -1,0 +1,2 @@
+# Historical snapshots retain original bytes (including CSV CRLF) for SHA-256 verification.
+artifacts/** -text -whitespace

@@ -13,8 +13,8 @@ import subprocess
 import sys
 from datetime import datetime, timezone
 
-ROOT = Path('/root/workspace/poseguard-nerf')
-DATA = Path('/root/workspace/data/nerf_synthetic')
+ROOT = Path(__file__).resolve().parents[1]
+DATA = Path(os.environ.get('POSEGUARD_DATA', str(ROOT.parent/'data/nerf_synthetic'))).expanduser().resolve()
 GT = DATA / 'lego'
 CASES = [('SV100-GT', 'gt', 0.0, 'lego')]
 CASES += [('SV100-T'+label, 'translation', value, dataset) for label, value, dataset in [

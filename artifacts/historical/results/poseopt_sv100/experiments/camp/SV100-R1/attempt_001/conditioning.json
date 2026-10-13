@@ -1,0 +1,502 @@
+[
+  {
+    "camera": 0,
+    "condition_before": 150.5465182145388,
+    "condition_after": 2.8331088169789993
+  },
+  {
+    "camera": 1,
+    "condition_before": 141.01205675756643,
+    "condition_after": 2.6496486823510614
+  },
+  {
+    "camera": 2,
+    "condition_before": 145.04295032076723,
+    "condition_after": 2.549048614502333
+  },
+  {
+    "camera": 3,
+    "condition_before": 146.46458408046897,
+    "condition_after": 2.5759073943725284
+  },
+  {
+    "camera": 4,
+    "condition_before": 146.46606571310588,
+    "condition_after": 2.4515941045670444
+  },
+  {
+    "camera": 5,
+    "condition_before": 145.85673995919495,
+    "condition_after": 2.4408479005198958
+  },
+  {
+    "camera": 6,
+    "condition_before": 148.09776157195066,
+    "condition_after": 2.3610679764311784
+  },
+  {
+    "camera": 7,
+    "condition_before": 148.46332246035445,
+    "condition_after": 2.8804868136441413
+  },
+  {
+    "camera": 8,
+    "condition_before": 143.22931622344498,
+    "condition_after": 2.7109965873807025
+  },
+  {
+    "camera": 9,
+    "condition_before": 149.8181840296326,
+    "condition_after": 2.6057883245057467
+  },
+  {
+    "camera": 10,
+    "condition_before": 145.02270463496035,
+    "condition_after": 2.5599135830998696
+  },
+  {
+    "camera": 11,
+    "condition_before": 149.873408096168,
+    "condition_after": 2.545240301746687
+  },
+  {
+    "camera": 12,
+    "condition_before": 148.139544260963,
+    "condition_after": 2.605064158158232
+  },
+  {
+    "camera": 13,
+    "condition_before": 149.57295070587665,
+    "condition_after": 2.606996347466652
+  },
+  {
+    "camera": 14,
+    "condition_before": 146.2062777992922,
+    "condition_after": 2.5853689206232393
+  },
+  {
+    "camera": 15,
+    "condition_before": 151.0182510703855,
+    "condition_after": 2.3940706065753163
+  },
+  {
+    "camera": 16,
+    "condition_before": 150.2173367877977,
+    "condition_after": 2.5354746876502836
+  },
+  {
+    "camera": 17,
+    "condition_before": 148.58919724501595,
+    "condition_after": 2.728393747053753
+  },
+  {
+    "camera": 18,
+    "condition_before": 149.17336378845448,
+    "condition_after": 2.848914723170075
+  },
+  {
+    "camera": 19,
+    "condition_before": 146.69730257523753,
+    "condition_after": 2.486398630431187
+  },
+  {
+    "camera": 20,
+    "condition_before": 144.56285137421744,
+    "condition_after": 2.421349453996536
+  },
+  {
+    "camera": 21,
+    "condition_before": 150.24414330776412,
+    "condition_after": 2.6970643077729806
+  },
+  {
+    "camera": 22,
+    "condition_before": 151.75165773544668,
+    "condition_after": 2.4336663229029827
+  },
+  {
+    "camera": 23,
+    "condition_before": 146.4270557553675,
+    "condition_after": 2.411713680402295
+  },
+  {
+    "camera": 24,
+    "condition_before": 147.75316597681615,
+    "condition_after": 2.340414712962425
+  },
+  {
+    "camera": 25,
+    "condition_before": 145.92263023954274,
+    "condition_after": 2.68591004966283
+  },
+  {
+    "camera": 26,
+    "condition_before": 146.9019506740917,
+    "condition_after": 2.812009439976311
+  },
+  {
+    "camera": 27,
+    "condition_before": 150.19943585732383,
+    "condition_after": 2.5033616993789787
+  },
+  {
+    "camera": 28,
+    "condition_before": 145.5929039462212,
+    "condition_after": 2.338425396542972
+  },
+  {
+    "camera": 29,
+    "condition_before": 151.95201574343793,
+    "condition_after": 2.504301333423049
+  },
+  {
+    "camera": 30,
+    "condition_before": 147.4368302270995,
+    "condition_after": 2.6956458115055812
+  },
+  {
+    "camera": 31,
+    "condition_before": 146.48777983081692,
+    "condition_after": 2.7480478915069906
+  },
+  {
+    "camera": 32,
+    "condition_before": 152.68154764100743,
+    "condition_after": 2.9138420362172632
+  },
+  {
+    "camera": 33,
+    "condition_before": 149.14104550977592,
+    "condition_after": 2.49348402648973
+  },
+  {
+    "camera": 34,
+    "condition_before": 149.8028780919911,
+    "condition_after": 2.360459060785742
+  },
+  {
+    "camera": 35,
+    "condition_before": 147.79253461189492,
+    "condition_after": 2.5937514712753265
+  },
+  {
+    "camera": 36,
+    "condition_before": 149.61117772768458,
+    "condition_after": 2.4229294290841707
+  },
+  {
+    "camera": 37,
+    "condition_before": 145.12540653118802,
+    "condition_after": 2.819611732588308
+  },
+  {
+    "camera": 38,
+    "condition_before": 149.84707247491642,
+    "condition_after": 2.485307548146556
+  },
+  {
+    "camera": 39,
+    "condition_before": 148.9029952075705,
+    "condition_after": 2.7126619761493593
+  },
+  {
+    "camera": 40,
+    "condition_before": 146.81480186500664,
+    "condition_after": 2.539341887760939
+  },
+  {
+    "camera": 41,
+    "condition_before": 143.047057730576,
+    "condition_after": 2.8298845752145274
+  },
+  {
+    "camera": 42,
+    "condition_before": 143.72123858133656,
+    "condition_after": 2.812208517013611
+  },
+  {
+    "camera": 43,
+    "condition_before": 148.60190498925428,
+    "condition_after": 2.4814368476104067
+  },
+  {
+    "camera": 44,
+    "condition_before": 147.1438194849767,
+    "condition_after": 2.5781300696970937
+  },
+  {
+    "camera": 45,
+    "condition_before": 151.78857886611394,
+    "condition_after": 2.3737080970615994
+  },
+  {
+    "camera": 46,
+    "condition_before": 149.22643930882728,
+    "condition_after": 2.490048202366206
+  },
+  {
+    "camera": 47,
+    "condition_before": 148.79669353145093,
+    "condition_after": 2.8348030065877126
+  },
+  {
+    "camera": 48,
+    "condition_before": 151.10749857535797,
+    "condition_after": 2.8072410268874997
+  },
+  {
+    "camera": 49,
+    "condition_before": 147.51697539660535,
+    "condition_after": 2.748274390288651
+  },
+  {
+    "camera": 50,
+    "condition_before": 146.6038868984863,
+    "condition_after": 2.464667602593091
+  },
+  {
+    "camera": 51,
+    "condition_before": 143.73870464225297,
+    "condition_after": 2.51212600623934
+  },
+  {
+    "camera": 52,
+    "condition_before": 146.43290702058465,
+    "condition_after": 2.42066924237187
+  },
+  {
+    "camera": 53,
+    "condition_before": 150.47032913594268,
+    "condition_after": 2.8234907877076094
+  },
+  {
+    "camera": 54,
+    "condition_before": 149.65954620408806,
+    "condition_after": 2.5303988226882486
+  },
+  {
+    "camera": 55,
+    "condition_before": 150.43049930471216,
+    "condition_after": 2.729588523008835
+  },
+  {
+    "camera": 56,
+    "condition_before": 150.71953370647927,
+    "condition_after": 2.8647602802719416
+  },
+  {
+    "camera": 57,
+    "condition_before": 151.2907613909658,
+    "condition_after": 2.7113666985091966
+  },
+  {
+    "camera": 58,
+    "condition_before": 147.04915470988968,
+    "condition_after": 2.5052964002602454
+  },
+  {
+    "camera": 59,
+    "condition_before": 144.79537050138597,
+    "condition_after": 2.4761043419606525
+  },
+  {
+    "camera": 60,
+    "condition_before": 141.90288024338008,
+    "condition_after": 2.428335369581582
+  },
+  {
+    "camera": 61,
+    "condition_before": 149.71429286152858,
+    "condition_after": 2.501892378178784
+  },
+  {
+    "camera": 62,
+    "condition_before": 146.84812437460343,
+    "condition_after": 2.8059606964148496
+  },
+  {
+    "camera": 63,
+    "condition_before": 145.55863851594168,
+    "condition_after": 2.437026471737417
+  },
+  {
+    "camera": 64,
+    "condition_before": 147.81042281401307,
+    "condition_after": 2.807059246226834
+  },
+  {
+    "camera": 65,
+    "condition_before": 149.2116112501158,
+    "condition_after": 2.8191736177772886
+  },
+  {
+    "camera": 66,
+    "condition_before": 145.3820281284389,
+    "condition_after": 2.488489294561659
+  },
+  {
+    "camera": 67,
+    "condition_before": 143.85266922558714,
+    "condition_after": 2.626647447346039
+  },
+  {
+    "camera": 68,
+    "condition_before": 147.54192036569873,
+    "condition_after": 2.4179062529539324
+  },
+  {
+    "camera": 69,
+    "condition_before": 149.56487792301536,
+    "condition_after": 2.8284329528777983
+  },
+  {
+    "camera": 70,
+    "condition_before": 148.05111488175737,
+    "condition_after": 2.676966466473413
+  },
+  {
+    "camera": 71,
+    "condition_before": 148.50089573891228,
+    "condition_after": 2.4659720395215174
+  },
+  {
+    "camera": 72,
+    "condition_before": 148.23530657614478,
+    "condition_after": 2.634905710966475
+  },
+  {
+    "camera": 73,
+    "condition_before": 151.086189039127,
+    "condition_after": 2.3804836873257096
+  },
+  {
+    "camera": 74,
+    "condition_before": 149.02115820888392,
+    "condition_after": 2.4093248718475686
+  },
+  {
+    "camera": 75,
+    "condition_before": 144.63904991749095,
+    "condition_after": 2.828346718943164
+  },
+  {
+    "camera": 76,
+    "condition_before": 148.71990174571948,
+    "condition_after": 2.728209317816765
+  },
+  {
+    "camera": 77,
+    "condition_before": 147.17466777553594,
+    "condition_after": 2.6530143053144255
+  },
+  {
+    "camera": 78,
+    "condition_before": 146.71825694703065,
+    "condition_after": 2.479461091061245
+  },
+  {
+    "camera": 79,
+    "condition_before": 146.8306338701866,
+    "condition_after": 2.6542792652897136
+  },
+  {
+    "camera": 80,
+    "condition_before": 146.42986831269192,
+    "condition_after": 2.445042791797658
+  },
+  {
+    "camera": 81,
+    "condition_before": 146.0834552712883,
+    "condition_after": 2.6288196408592404
+  },
+  {
+    "camera": 82,
+    "condition_before": 146.41353374085602,
+    "condition_after": 2.7506948038042873
+  },
+  {
+    "camera": 83,
+    "condition_before": 147.83486734616284,
+    "condition_after": 2.6574416371794567
+  },
+  {
+    "camera": 84,
+    "condition_before": 146.0724465360208,
+    "condition_after": 2.458972887062086
+  },
+  {
+    "camera": 85,
+    "condition_before": 145.53172568557764,
+    "condition_after": 2.8409273891083666
+  },
+  {
+    "camera": 86,
+    "condition_before": 145.29035652178086,
+    "condition_after": 2.6093764525493266
+  },
+  {
+    "camera": 87,
+    "condition_before": 145.0622931359171,
+    "condition_after": 2.554491807605699
+  },
+  {
+    "camera": 88,
+    "condition_before": 145.47951069541293,
+    "condition_after": 2.8603357628732153
+  },
+  {
+    "camera": 89,
+    "condition_before": 149.55485854611948,
+    "condition_after": 2.873712342434533
+  },
+  {
+    "camera": 90,
+    "condition_before": 146.69109370417036,
+    "condition_after": 2.599249635228203
+  },
+  {
+    "camera": 91,
+    "condition_before": 146.19876754918192,
+    "condition_after": 2.806682531042866
+  },
+  {
+    "camera": 92,
+    "condition_before": 150.42606751388752,
+    "condition_after": 2.4214469276715147
+  },
+  {
+    "camera": 93,
+    "condition_before": 147.6082317737158,
+    "condition_after": 2.566912785677753
+  },
+  {
+    "camera": 94,
+    "condition_before": 149.40704761309058,
+    "condition_after": 2.4151296122248467
+  },
+  {
+    "camera": 95,
+    "condition_before": 150.11230552499993,
+    "condition_after": 2.7052724306737215
+  },
+  {
+    "camera": 96,
+    "condition_before": 147.98966571616748,
+    "condition_after": 2.391493166250647
+  },
+  {
+    "camera": 97,
+    "condition_before": 146.54052430529808,
+    "condition_after": 2.597478091733131
+  },
+  {
+    "camera": 98,
+    "condition_before": 141.12386577308837,
+    "condition_after": 2.7152958547925805
+  },
+  {
+    "camera": 99,
+    "condition_before": 149.11424319394484,
+    "condition_after": 2.548381562559023
+  }
+]

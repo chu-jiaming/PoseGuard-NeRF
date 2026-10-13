@@ -1,0 +1,32 @@
+{
+  "files": {
+    "/root/workspace/data/nerf_synthetic/lego/transforms_test.json": "b03adb05593756fdeaacc6c82fc2596270e91fe296e79c9a588df098e4758a64",
+    "/root/workspace/data/nerf_synthetic/lego/transforms_train.json": "82d46cfbd405d7da8562b6fa75b6fb0631a3f941adf66f0c023acb8bf9ea273a",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml": "543dd4bc339f39d6a03efa70d0d6e1caa336da8877d4db364c8af1fc84781bd6",
+    "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt": "c3d47101d4df1e2039ba3aa1667a7c1c98c7d12fb2e1b5d89cb1b8d31c785a6e",
+    "/root/workspace/poseguard-nerf/poseguard/__init__.py": "919d63a41c03f156edd989a6a738fcd888da82fc7043a595811678bdcc415f8c",
+    "/root/workspace/poseguard-nerf/poseguard/alignment.py": "8764680b0a222cff396bb98bb16215c2b6202bd65ce5a1154372a0495e9a8bee",
+    "/root/workspace/poseguard-nerf/poseguard/geometry.py": "6b2b76a59bc336c7e6a22391efa370af03cea2a645b58394a239ccd275191f25",
+    "/root/workspace/poseguard-nerf/poseguard/methods.py": "baebd82fb9deb06b6d060b11a6cbb488a0cc44cdb904a9487419f12c0d413680",
+    "/root/workspace/poseguard-nerf/poseguard/worker.py": "0c8cbcf90c8ea79fadf5fcca896ee3aa93b1b8f6b08da05c77f18ebdea987442",
+    "/root/workspace/poseguard-nerf/results/SV100-GT/metrics.json": "6dc54056d3b07b0fe4d3156b33c10b7c9316b36f730236ab3cc3dfa2f47d4c6c",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/metrics.json": "a2d7d613c67c238f3e6bcd6811263aa67c94c316fb3cb6a1a5fec5be3d33b0ab",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml": "867782d6ff77657a3181c8e976ad15e9feb359d766e32dc0e20dbb73b8d0e450",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt": "fcb4125f12d2474d491827dc66da27b47b4716bb70d88484729593065459fd27",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/metrics.json": "a8b7c5875459c13de04d09d155a8e2edbe89140247dead193da6be50e0ab3b12",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml": "10004899b4e9dea74f247fc86dc17032b6db889e50a74f9194e76e7afc78ca40",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt": "31f71061c53dfcffe7c447999d031aa22fbeaf0cdf2d7ef3c547b6872413c8d6",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/metrics.json": "c8e6a97887c7b2f26c100d8cb61893e28fe6a0484ced83aea54501dd0d436ff6",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml": "cd6c5a3ee259ddc1897999ee79bf2330f933540c730e3e66ac30d97b46dab67f",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt": "dc6eb7a822559660929967ab93afc83e170a60786555e35096d008ecca4a1515",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/metrics.json": "4915e3d35e8ff1d6788ec722538e4a23b10583cf60ee4ffde2b297683c256378",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml": "b46dba316b6b631a37b24ebd3a152bfed6036b04e371582da7b976eca10f5ee2",
+    "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt": "1118fdccb527a71bcc5d8d966839513978c1d4836628d88796637f3ddc23b78a"
+  },
+  "packages": {
+    "torch": "2.1.2+cu118",
+    "nerfstudio": "1.1.5",
+    "numpy": "1.24.2",
+    "torchmetrics": "1.2.0"
+  }
+}

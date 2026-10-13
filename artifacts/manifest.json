@@ -1,0 +1,2033 @@
+{
+  "description": "Byte-identical snapshot of selected local experiment artifacts; original absolute paths are historical provenance, not portable runtime paths.",
+  "files": [
+    {
+      "source": "outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml",
+      "sha256": "543dd4bc339f39d6a03efa70d0d6e1caa336da8877d4db364c8af1fc84781bd6",
+      "bytes": 5152
+    },
+    {
+      "source": "outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/config.yml",
+      "sha256": "30c9b909c635d04acbd33a6dc8ff644242a37bc6b261536cb26af57b3ef8223a",
+      "bytes": 5186
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/config.yml",
+      "sha256": "e576e86c57928e0956695c51e1bf8cf614d8c088946e03c668a801ebdd352431",
+      "bytes": 5182
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/config.yml",
+      "sha256": "13671b5d9e9929203b7ac0993b3a46f02c01cf77af57d87fd1b3eb96b9d6678b",
+      "bytes": 5182
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/config.yml",
+      "sha256": "52290d9ac1b5671db35f8fd7c0a800e479130dc70a4bb2e6b889fe8a2456f3e9",
+      "bytes": 5182
+    },
+    {
+      "source": "outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/config.yml",
+      "sha256": "63131410d086c04a2a33764ad7c97fe63f706311b0bde030057462d36f2414de",
+      "bytes": 5186
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/config.yml",
+      "sha256": "db48cdb56cb4dd8b376e3b43f382423c8d45e9d9303573860c1bfa4586a9a1c0",
+      "bytes": 5182
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/config.yml",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/config.yml",
+      "sha256": "7d5e7bf17cde5c824c4ca1b8761d5f8e4b33703eba878c6c59c6428f563f5779",
+      "bytes": 5182
+    },
+    {
+      "source": "outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/config.yml",
+      "archive": "artifacts/historical/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/config.yml",
+      "sha256": "edf9fa4a61567ea9553408a08ad9b4b7df94984fe37a0f19e4fbade03dc4bf3f",
+      "bytes": 5170
+    },
+    {
+      "source": "outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/dataparser_transforms.json",
+      "archive": "artifacts/historical/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/SV100-GT/metadata.json",
+      "archive": "artifacts/historical/results/SV100-GT/metadata.json",
+      "sha256": "31a542b67738fb3d9c4dac7314c702411b864f94632a96edd94ea0cf57c4379a",
+      "bytes": 792
+    },
+    {
+      "source": "results/SV100-GT/metrics.json",
+      "archive": "artifacts/historical/results/SV100-GT/metrics.json",
+      "sha256": "6dc54056d3b07b0fe4d3156b33c10b7c9316b36f730236ab3cc3dfa2f47d4c6c",
+      "bytes": 744
+    },
+    {
+      "source": "results/SV100-R0.5/metadata.json",
+      "archive": "artifacts/historical/results/SV100-R0.5/metadata.json",
+      "sha256": "1421ae7f488a78a1e9755f041a2cf3af120e4e924da5d534bd1c9acbe095d4c6",
+      "bytes": 864
+    },
+    {
+      "source": "results/SV100-R0.5/metrics.json",
+      "archive": "artifacts/historical/results/SV100-R0.5/metrics.json",
+      "sha256": "54777656c886b0f546569910f793c3141bf0dc45420a8c5435d41a765ed7c3ea",
+      "bytes": 772
+    },
+    {
+      "source": "results/SV100-R1/metadata.json",
+      "archive": "artifacts/historical/results/SV100-R1/metadata.json",
+      "sha256": "89262618961e48f56d2ee0e32eeaa21497ea9f10909dce3d8a2a7102cea251de",
+      "bytes": 852
+    },
+    {
+      "source": "results/SV100-R1/metrics.json",
+      "archive": "artifacts/historical/results/SV100-R1/metrics.json",
+      "sha256": "09812fa1a70f3bbf78eb5c146645592532300252ff9bde3f1a5054db34692880",
+      "bytes": 765
+    },
+    {
+      "source": "results/SV100-R2/metadata.json",
+      "archive": "artifacts/historical/results/SV100-R2/metadata.json",
+      "sha256": "9077763ccd8a2417fe7fdb514b581795f352a48158c484f0593c34595326f0fa",
+      "bytes": 851
+    },
+    {
+      "source": "results/SV100-R2/metrics.json",
+      "archive": "artifacts/historical/results/SV100-R2/metrics.json",
+      "sha256": "6079fc9478c5c6db6f37ca26767b51579b7e2a466ad7dc39cf3d5af4a3f0385a",
+      "bytes": 766
+    },
+    {
+      "source": "results/SV100-R5/metadata.json",
+      "archive": "artifacts/historical/results/SV100-R5/metadata.json",
+      "sha256": "216bde176e13b6c12d257b6aefa654e35781a48c0176ebed95c7cc9d7bf0f55f",
+      "bytes": 852
+    },
+    {
+      "source": "results/SV100-R5/metrics.json",
+      "archive": "artifacts/historical/results/SV100-R5/metrics.json",
+      "sha256": "7141aba9193b2e60b8998def267b86f390e19dbac514c2288ba1eae66911627e",
+      "bytes": 768
+    },
+    {
+      "source": "results/SV100-T0.5/metadata.json",
+      "archive": "artifacts/historical/results/SV100-T0.5/metadata.json",
+      "sha256": "583b60fe257a94e97a4d60b4024ed9e9f8cd2b3e9209628df6a029d2abc27b4c",
+      "bytes": 868
+    },
+    {
+      "source": "results/SV100-T0.5/metrics.json",
+      "archive": "artifacts/historical/results/SV100-T0.5/metrics.json",
+      "sha256": "445f64d42ca4fc03fdcca85d0c1241b17f69108c184f1e2bbac48519a1903ab8",
+      "bytes": 772
+    },
+    {
+      "source": "results/SV100-T1/metadata.json",
+      "archive": "artifacts/historical/results/SV100-T1/metadata.json",
+      "sha256": "e8c869ab2dbe6e5fe9c8a03e35f97874fc562d8c0f84c6f143c1ae19d3fd75e8",
+      "bytes": 832
+    },
+    {
+      "source": "results/SV100-T1/metrics.json",
+      "archive": "artifacts/historical/results/SV100-T1/metrics.json",
+      "sha256": "2ed67f0c6581f4754b158d6ab55f5dd4c51f3af3515d690c48dbd0176798d598",
+      "bytes": 755
+    },
+    {
+      "source": "results/SV100-T2/metadata.json",
+      "archive": "artifacts/historical/results/SV100-T2/metadata.json",
+      "sha256": "4ed3315a2dd000255c1f07f84392c7c74d684bf337032973e281aad9911f22b6",
+      "bytes": 855
+    },
+    {
+      "source": "results/SV100-T2/metrics.json",
+      "archive": "artifacts/historical/results/SV100-T2/metrics.json",
+      "sha256": "b4049590ac3249ed7c34462d3d4c8c93c9bbcb890bcaaaf6beada0f8d1bcbb44",
+      "bytes": 765
+    },
+    {
+      "source": "results/SV100-T5/metadata.json",
+      "archive": "artifacts/historical/results/SV100-T5/metadata.json",
+      "sha256": "83a3b3dbc5557eda67a57ca5139128941fded9ff29a2eea5e6c4d60ea48de70d",
+      "bytes": 856
+    },
+    {
+      "source": "results/SV100-T5/metrics.json",
+      "archive": "artifacts/historical/results/SV100-T5/metrics.json",
+      "sha256": "e28033c94be16c3b6097f94c1c9b068078cc57f7588bdce7224bf78d2963c30b",
+      "bytes": 767
+    },
+    {
+      "source": "results/SV100_full_summary.csv",
+      "archive": "artifacts/historical/results/SV100_full_summary.csv",
+      "sha256": "372f82693a73e964601b79c61742baa3154cb8b10379859aa180ce7bee16b2de",
+      "bytes": 5121
+    },
+    {
+      "source": "results/SV100_pipeline_summary.txt",
+      "archive": "artifacts/historical/results/SV100_pipeline_summary.txt",
+      "sha256": "3a66a1b6cd853f9a5726a942a2d2c57ec8c23a304a115022473955553209d17b",
+      "bytes": 1127
+    },
+    {
+      "source": "results/SV100_rotation_sweep.csv",
+      "archive": "artifacts/historical/results/SV100_rotation_sweep.csv",
+      "sha256": "7e801c45df9c380deecdf62d887558b41645db3f4540468dddb2614e1cb7d31b",
+      "bytes": 2906
+    },
+    {
+      "source": "results/SV100_translation_sweep.csv",
+      "archive": "artifacts/historical/results/SV100_translation_sweep.csv",
+      "sha256": "79596118e650bf32ee565897724a91c6447a5e24d0dcf1a0552cb048b344dcc7",
+      "bytes": 2898
+    },
+    {
+      "source": "results/dataset_manifest.json",
+      "archive": "artifacts/historical/results/dataset_manifest.json",
+      "sha256": "25294e8d6945de25066bb9c3fd4b37830adca99de0547ab7b923ef851947d298",
+      "bytes": 3579
+    },
+    {
+      "source": "results/environment.txt",
+      "archive": "artifacts/historical/results/environment.txt",
+      "sha256": "cb410b9c8bb46ce333dfd9467576a8ac39775e62e4dde434d6966bb0524f4c63",
+      "bytes": 5443
+    },
+    {
+      "source": "results/pipeline_state.json",
+      "archive": "artifacts/historical/results/pipeline_state.json",
+      "sha256": "a7135509a20cddb40bb44f5de224819726ccc635ef73d7c346acb33f0bab71f5",
+      "bytes": 500
+    },
+    {
+      "source": "results/poseopt_sv100/environment.txt",
+      "archive": "artifacts/historical/results/poseopt_sv100/environment.txt",
+      "sha256": "8268050d362c43a2765764ea71bb8c76d2e927e2ed128c907d6729e77ef31872",
+      "bytes": 5518
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/analysis_complete.json",
+      "sha256": "734c28426f37b05ebc80ad687f6f6e93147bff3b9cb185d5fa38f5c1be52508b",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/conditioning.json",
+      "sha256": "7ce6f41272b01dcae0dfec1f484918f715fa4a3c707c35540fa5cefbc1d49d89",
+      "bytes": 11205
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/metrics.json",
+      "sha256": "a2d7d613c67c238f3e6bcd6811263aa67c94c316fb3cb6a1a5fec5be3d33b0ab",
+      "bytes": 821
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/optimized_poses.json",
+      "sha256": "f6d301c1085d0a93db2108b18ef0f3799b47b030d3522ee523eec986e6329033",
+      "bytes": 42540
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "sha256": "867782d6ff77657a3181c8e976ad15e9feb359d766e32dc0e20dbb73b8d0e450",
+      "bytes": 5717
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/analysis_complete.json",
+      "sha256": "df845da11685006382f5cb36a456b4d25228c6e18cf15d8be4aef26791e0f2c2",
+      "bytes": 249
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/conditioning.json",
+      "sha256": "a9524fed0e59360db6b220e95539b3de38cc98d4ce914029399239a8ab270228",
+      "bytes": 11214
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/metrics.json",
+      "sha256": "5dad2871bd06ce49db857baf2171d45078361f41fa968e1c145de37ca9cd7776",
+      "bytes": 825
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/optimized_poses.json",
+      "sha256": "492284549a9a1a055f26866832faf6b57cf96a1a626838533893790b93c20031",
+      "bytes": 42515
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "sha256": "903634313cdfc950c9f9a9507867b322c1f73c9a50b5ce080a2560fe11ff106d",
+      "bytes": 5741
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/analysis_complete.json",
+      "sha256": "6d1829f527730266f8ca71bfdc49f07b15b94286c3a3fcdc21216e111b342849",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/conditioning.json",
+      "sha256": "02268d0c665408b4a63ca6a32d04bb7192f9f1de6893f038484dd190360bb2cc",
+      "bytes": 11213
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/metrics.json",
+      "sha256": "8d11e78d44ba66b81e30873685f5dfd476a9f56eb50762f41c86968a9bc58f30",
+      "bytes": 815
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/optimized_poses.json",
+      "sha256": "bb7b46e2dec87624b5e2dd07c2c7ce256ce31bbce82c7d0a023e5a021f41c6de",
+      "bytes": 42542
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "sha256": "793b04fe8701bc14650cda4283ccdbb9c217534bf7d5a5b83f287928133547c2",
+      "bytes": 5735
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/analysis_complete.json",
+      "sha256": "849fe33e01ca10625243d7918f76fd7c82b719a9c07431bc751b8bdc8aa96231",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/conditioning.json",
+      "sha256": "9a0e73dc6ec0d83c4120d0ac709cee4a5e17ce508e3bb0418a4d01ec6358acc9",
+      "bytes": 11209
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/metrics.json",
+      "sha256": "5b3ea983fb0be0fe3cdd10291c5c9133e088c002e3eb2db090011b5dd9a07dca",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/optimized_poses.json",
+      "sha256": "3603fce4444a25062c629342fb81e2a7b687b3e8c19fb3e411b154be60c95da7",
+      "bytes": 42524
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "sha256": "80abcac57a2cc1cf14eecb3c55678487b45dfac86a9a0c67a0c2e196a2aba44f",
+      "bytes": 5735
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/analysis_complete.json",
+      "sha256": "3bbaabc1b3e3d4fce9a65793f950f283343d72520afdc8b9abed032dd9722682",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/conditioning.json",
+      "sha256": "f4fbc2d3812065d110a54a25d408347927bae17cd90f6f475a76f38604f08bb4",
+      "bytes": 11212
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/metrics.json",
+      "sha256": "02993b2f8fe0ae727384677e170a8f6096244cfaf0d32b9725a037936b5081ee",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/optimized_poses.json",
+      "sha256": "024424811cfc89fe42dffe435a5c29ee3946a9edb00d967eeb9bbdf364c37398",
+      "bytes": 42486
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "sha256": "5ba18a4823c21e25be04dc7b8eb49f6da3143c0cc7496a6ae2e71c5e3e08893d",
+      "bytes": 5735
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/analysis_complete.json",
+      "sha256": "ffb0760179c719ff3da819a67a536be2ffdae04397dc9ba5fdc7b0f17438cdc2",
+      "bytes": 249
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/conditioning.json",
+      "sha256": "f42f1ad2556ccf98c190866030ee9b69ab2f2ce00530313ef07a5ba942fc1afb",
+      "bytes": 11204
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/metrics.json",
+      "sha256": "d83751be3f0a4676a4d5485b9f928f741bfdb54de537ebb0c6b9efa1631f6a2f",
+      "bytes": 824
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/optimized_poses.json",
+      "sha256": "e43dc39cdde5c4e9332706132383f3918742988d7b12d72940587816ce274447",
+      "bytes": 42561
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "sha256": "d3fe52d005415c8913e73eec819892a879ce290b6e7aebf71f07ebd8919a8c4e",
+      "bytes": 5741
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/analysis_complete.json",
+      "sha256": "2acc20669ab24a0a0cff37223bbb668b953201705a87e25a05039915db1c1198",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/conditioning.json",
+      "sha256": "4c7f9130fe658ef851c8d31be90d176e909a9cef9a96057787c3e3e54515fb58",
+      "bytes": 11204
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/metrics.json",
+      "sha256": "7ee3c8fc69f4da6295550ed7ff551ba424dfaf9df8ca0aa9079bad1e08dc21a9",
+      "bytes": 819
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/optimized_poses.json",
+      "sha256": "6cf811124ab954c66f50a5b1f4ab5fc0f2efc7c397094a05df6baa82ad4f0439",
+      "bytes": 42506
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "sha256": "9cdf70b4672fca37381feddabb0e9f283bdd09567e24e9fc66e0b2098ffbd6c5",
+      "bytes": 5729
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/analysis_complete.json",
+      "sha256": "0f0fbcdd640d750e960bc17309882da0034006f99859ed0cb8f2a3d07d31df03",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/conditioning.json",
+      "sha256": "db0f92dc496440848a9bd0f5fc570fb649fe2af01e5eaae33408aa7821e5ab6e",
+      "bytes": 11214
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/metrics.json",
+      "sha256": "e0f89fabbd56b4a01fa61ec48b5f8261a1c84cec5408ac6270992c31a6344d5f",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/optimized_poses.json",
+      "sha256": "5add3bd2be6eb7d208bb4aa912e8d423e7141f0863d1a00496fe5617175d6bb7",
+      "bytes": 42562
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "sha256": "f71948a48b2fc68e6fa2cdb2ebc66a1df6d4e548d3ddbfcb5a4300e2603598da",
+      "bytes": 5735
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/analysis_complete.json",
+      "sha256": "0a6a824f21942b8b63d20d0c27fb543675304ff73c3442a4dc9f701be6dd10c8",
+      "bytes": 245
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/conditioning.json",
+      "sha256": "30965c81e6e652568c555c91ae96222dffd5fe2807d43fd7196f3ea8c6b4995f",
+      "bytes": 11217
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/metrics.json",
+      "sha256": "dc8f07dd12c16ad62230b3f0b3f347b96648378c0e8a82f0adc119adcfcef6d3",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/optimized_poses.json",
+      "sha256": "c991f541ef1ae62bbc9c54dc08375b0d52d31a8bf23d113e630259c6d60e435c",
+      "bytes": 42571
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "sha256": "771814d093ce13e77890bbb28c28c23c2b7bebe32e99f1b55bdf855a48b0b2b2",
+      "bytes": 5735
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/analysis_complete.json",
+      "sha256": "453f2b7c80079da5d9f0c453365784daf68d090a5c1e7838410bf4c2618105de",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/metrics.json",
+      "sha256": "a8b7c5875459c13de04d09d155a8e2edbe89140247dead193da6be50e0ab3b12",
+      "bytes": 822
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/optimized_poses.json",
+      "sha256": "cbcd19afeb978cefdfef2fa1a82e4af29d2ae605fb473750cc841ff3bc615917",
+      "bytes": 42528
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "sha256": "10004899b4e9dea74f247fc86dc17032b6db889e50a74f9194e76e7afc78ca40",
+      "bytes": 5720
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/analysis_complete.json",
+      "sha256": "fec303e0e9fa7a41f2e7a0726f098cdb757f407949b4d1fe1a1e31c40c739ccf",
+      "bytes": 251
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/metrics.json",
+      "sha256": "8ce2348b6dda7436dc09716c77c066879836ba3363417f149fefa0ab93d9b8ca",
+      "bytes": 824
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/optimized_poses.json",
+      "sha256": "6bcdf9a171381ef69d73ccb2f422ae60669d6dd0965200bd76e5813a5fb974c2",
+      "bytes": 42575
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "sha256": "77b201170092be7e9387c92b816e051976d7033152b8cdd65ac4b00a17a72f8a",
+      "bytes": 5744
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/analysis_complete.json",
+      "sha256": "8f90f74dc988b2663f14fcb23ceadfed6bedcb9e5f074590d3702740c4793e0a",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/metrics.json",
+      "sha256": "a70a83f5c89da5b7a24455f422e8f61e353b2b5dc7e9a15d31e5550d649a019d",
+      "bytes": 823
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/optimized_poses.json",
+      "sha256": "fdb4d884ee10d35034d53a5fcc822ccd9ae1d58bfb63779735ffb5f12777be56",
+      "bytes": 42577
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "sha256": "f5e4d121d0e14b12bdf4c3e314d0e0fb85f441f8201766da554cb0f269972878",
+      "bytes": 5738
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/analysis_complete.json",
+      "sha256": "6451bc76fcddbbd5df210748c37eba27773b9d7b5510a7e2355732facbcc1b68",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/metrics.json",
+      "sha256": "fd4a290fdf5a6bfd477d597f9369595f993f08ce7406d5b6949cbc4acda7b0d8",
+      "bytes": 822
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/optimized_poses.json",
+      "sha256": "ddd9b18b14d6cb5e88a7d8ea8bc66ea52f35a75c4eaa610fdbe3b980c670a347",
+      "bytes": 42498
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "sha256": "22a91f57992f1e134e971195c5deb5a3f76e1310b8ec22fdb0f214a8cb38b0df",
+      "bytes": 5738
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/analysis_complete.json",
+      "sha256": "fdf9e0e52f26667561c545b7933e2ab19470087b5e53d81f5968d3ddd68dc385",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/metrics.json",
+      "sha256": "c64d30fcab7165817495b69fdfade6bbf3e966caf5c2c62565b01442b97c47f7",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/optimized_poses.json",
+      "sha256": "add1735a2880b7c41115344f23711d7dc37691327d3fd192d39fd581b2ec898e",
+      "bytes": 42477
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "sha256": "06dc8169c829d885fe4fdc0d6c8b5a0123561e90cf8676702a3796abc7bb6876",
+      "bytes": 5738
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/analysis_complete.json",
+      "sha256": "0e3208c7bec5f363e2649b48dffdd4fa1628968afc667219880f360ccdaaa0e0",
+      "bytes": 251
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/metrics.json",
+      "sha256": "447f31d56076c92022a826a79bfd2b3f5601b7f6471c8bdd00cb546d35b6b5bc",
+      "bytes": 825
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/optimized_poses.json",
+      "sha256": "c8cc359a0deceac001a465a2ff5b818e2155521d86b925b52fec7d9b809a22f4",
+      "bytes": 42586
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "sha256": "fc253776c726510e49d4dfb7ff7cd9299bc714d0be2c0fdb2d930c5c204c2ac4",
+      "bytes": 5744
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/analysis_complete.json",
+      "sha256": "bcfabba5a44d66f537fab4f91b5b2266c56b5d16dec37b288eb1b3f738f4fe8d",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/metrics.json",
+      "sha256": "1d1c1cb060c0243a7a78c97f719b882cdc1445b5a39d642d329ae9b27b60edca",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/optimized_poses.json",
+      "sha256": "170bc140ed3dffcfe4bf64c25f5fdd7057426185a8214852c0586369ac530e1a",
+      "bytes": 42491
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "sha256": "565bdfbfd846c2376e74103ddca3ccbc210cf94e0960eaa95c4db0d387fd2d63",
+      "bytes": 5732
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/analysis_complete.json",
+      "sha256": "fcde0996fbdaef4dca552118bfda46b1c535bf4d0b46535c6a1327a529292c10",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/metrics.json",
+      "sha256": "b3bcecd4f79839305739aa4e4936a56f7cfa8d51298f1340e10dee7e59a6e434",
+      "bytes": 820
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/optimized_poses.json",
+      "sha256": "8710127a9cfcba53ceb353803f5bf02a1eacbd8a9f59050a7b425bb974217fb0",
+      "bytes": 42494
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "sha256": "7372a467174e8dbe6b3ea11ff0f49101b3e9c9817f24f758648b3ed85d30cd26",
+      "bytes": 5738
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/analysis_complete.json",
+      "sha256": "11ec3bb4a509d6eed9d9eeb4c4491bdbb55390fa7e5ee94b6c88ef87d8475f3b",
+      "bytes": 247
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/conditioning.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/metrics.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/metrics.json",
+      "sha256": "f41049d5c5448bbfd81e3d01c5d63abace760badae222a8cf0951d3d921e8147",
+      "bytes": 818
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/optimized_poses.json",
+      "sha256": "79433e8fd61796c147f467af30986f4c67a7616df55ab14d0175eb39aee25a75",
+      "bytes": 42552
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "sha256": "f9481469a0c19362456e1505c264304ad03a54b9095c354a096b600a58f843b6",
+      "bytes": 5738
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/train_complete.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100/manifest.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/manifest.json",
+      "sha256": "b20b836d84c4a3737e0c1176819281f20f1f15fb54554751fd5998051a6cbf7d",
+      "bytes": 9406
+    },
+    {
+      "source": "results/poseopt_sv100/naive_failure_analysis.md",
+      "archive": "artifacts/historical/results/poseopt_sv100/naive_failure_analysis.md.txt",
+      "sha256": "534f5736fdcdbe0024401ec714ad13b8260ebd6567fe8d0b291a491f57f5b217",
+      "bytes": 5575
+    },
+    {
+      "source": "results/poseopt_sv100/report.md",
+      "archive": "artifacts/historical/results/poseopt_sv100/report.md.txt",
+      "sha256": "4b0372bd7cd4dc9a8e71ccaa024e16bd9ea85864ab622a4c17e5efcd8096dd44",
+      "bytes": 13424
+    },
+    {
+      "source": "results/poseopt_sv100/state.json",
+      "archive": "artifacts/historical/results/poseopt_sv100/state.json",
+      "sha256": "a4565075b7082dc15c9bc987aff384e051f5463fd39a503551bb228b878219c3",
+      "bytes": 17613
+    },
+    {
+      "source": "results/poseopt_sv100/summary.csv",
+      "archive": "artifacts/historical/results/poseopt_sv100/summary.csv",
+      "sha256": "14b4be76ffb1579bb18403cf5d81b5e973ff1543617e04b3cfb8d460b56106ff",
+      "bytes": 4152
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/analysis/paired_metrics.csv",
+      "archive": "artifacts/warmup/paired_metrics.csv",
+      "sha256": "6b8220b3f6d4c11885ff915b115ca98d09f272c7ea83395cc5dac8da897674b9",
+      "bytes": 8523
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/analysis/aggregate_metrics.json",
+      "archive": "artifacts/warmup/aggregate_metrics.json",
+      "sha256": "f4ec0c98325e868a1e645336093de22cee6dd36f9dec767352a0d8ece4290d86",
+      "bytes": 2247
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/analysis/quality_comparison.png",
+      "archive": "artifacts/warmup/quality_comparison.png",
+      "sha256": "cb0c9a259490e78bd26839250c84622caa355a19567233b183459024fdd40c44",
+      "bytes": 180780
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/analysis/gt_early_pose_drift.png",
+      "archive": "artifacts/warmup/gt_early_pose_drift.png",
+      "sha256": "ba731be34c5326df0651003dff1f1878dad93efb924de8a03570cfc81b252586",
+      "bytes": 220170
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/analysis/report.md",
+      "archive": "artifacts/warmup/report.md",
+      "sha256": "43527be347918de247bf910d80a02127a3ea5aaf73b05be747271a77218e7301",
+      "bytes": 4597
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/summary.csv",
+      "archive": "artifacts/warmup/summary.csv",
+      "sha256": "0e60a462b753cd343ddba759c3c87186cf31763d7bfe41d8c17d900b44dcc77d",
+      "bytes": 4145
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/manifest.json",
+      "archive": "artifacts/warmup/manifest.json",
+      "sha256": "620b4009de25523cfd99bbc5aadc9487954552c450a688a7d9104627ac759c54",
+      "bytes": 9406
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/state.json",
+      "archive": "artifacts/warmup/state.json",
+      "sha256": "a84fa8b2208ef3ded4439b6683ac9e5eb40b6ba165bef93fc095aa75a00a5aee",
+      "bytes": 18436
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/environment.txt",
+      "archive": "artifacts/warmup/environment.txt",
+      "sha256": "306b9ed1c93ad8720c3cac8fd8a788ec9ff522a2a9d9eb46706fd0aa6369980f",
+      "bytes": 5518
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/analysis_complete.json",
+      "sha256": "d875bb6359ff0369b17530ddf815e5ac2a0480b4500735226162f6901d782711",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/metrics.json",
+      "sha256": "4915e3d35e8ff1d6788ec722538e4a23b10583cf60ee4ffde2b297683c256378",
+      "bytes": 835
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/optimized_poses.json",
+      "sha256": "3a1c29bfa7cbe4bb86abfac0ef6d297761d4a9f7922824d566b70857bd868717",
+      "bytes": 42516
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "sha256": "b46dba316b6b631a37b24ebd3a152bfed6036b04e371582da7b976eca10f5ee2",
+      "bytes": 5734
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/analysis_complete.json",
+      "sha256": "1eea4f535532a2a826bad514018889892f0db0bb357e66e986c64e0cfb7e99d6",
+      "bytes": 262
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/metrics.json",
+      "sha256": "1947ad45027e78260e4da642f623b76f021d138749fa222160ffe095e03a6c4e",
+      "bytes": 840
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/optimized_poses.json",
+      "sha256": "23953594ffcb48ff743cb4a51989276a9dedc9b61632d37eb630bf88d91e012d",
+      "bytes": 42559
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "sha256": "905e320e77ae835721931750cc603f411d46b441cbcb623d84bd9ce571a3cd7f",
+      "bytes": 5758
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/analysis_complete.json",
+      "sha256": "9b546c6c24a1b19cc045be87581d2254721430977a90dca514ee91fcc42159e6",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/metrics.json",
+      "sha256": "1d525492522d1a02bf3ebe868b7605a499b77606e3e0dc4c3500a4e0157963ae",
+      "bytes": 832
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/optimized_poses.json",
+      "sha256": "61f444c1b016a060c3d698025a68d85f44a290db8852b12be044d598dc6be990",
+      "bytes": 42598
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "sha256": "45081c181b84f4f2bd5f20657e1c0b86fcb349f0e47160a50e54e350b3222554",
+      "bytes": 5746
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/analysis_complete.json",
+      "sha256": "9387d090b7d59d76069a39d915e92a5763c3bb5e51d1d23dfc2f47c90b5136c8",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/metrics.json",
+      "sha256": "2f0c428714420e027134e91a3ec718f4f38ed8be8c5e6ba6fe6bade7b61bf838",
+      "bytes": 834
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/optimized_poses.json",
+      "sha256": "356aebce9e844fdfff03f92a4090217f7b9708f90b5013c15b0622f9c53bf684",
+      "bytes": 42591
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "sha256": "5dd575e8aa1497e51e506294e8dbf0c6041f44c18e8a10fd85641e9e8bb3c148",
+      "bytes": 5752
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/analysis_complete.json",
+      "sha256": "6801129f5e5a3866180be96e0d83c5ab444346e471b54ddab64f817eeaee1178",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/metrics.json",
+      "sha256": "7c9307e9d56cd56316ff37e209756e48cb703e71e1569db30d852e9806348566",
+      "bytes": 835
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/optimized_poses.json",
+      "sha256": "ac7f9c512c4de0cb7accd5111017b6d0f6cb16e93b02200ce45d9849b54761a6",
+      "bytes": 42521
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "sha256": "f57e28c58508dc2f97e2b34c5cb1f4e624ecec57cd668c93e0a0c83d0ee2d2a6",
+      "bytes": 5752
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/analysis_complete.json",
+      "sha256": "de6521d6fafd2ffcc88895c305d31e262688f36816af3fd953f881a8b5574035",
+      "bytes": 262
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/metrics.json",
+      "sha256": "a1f8597e792055dec80fabfe63b0021d1120d58affc4ccbc602777d8c91411b1",
+      "bytes": 838
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/optimized_poses.json",
+      "sha256": "84c8dd1c8778244c93ad4bf4d15c9df363270b416564fbb206c30d2754421f77",
+      "bytes": 42541
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "sha256": "35a5f201709753e6fec6f7c4560909a4e77b97b3495bdd87931183e15617dd18",
+      "bytes": 5758
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/analysis_complete.json",
+      "sha256": "693108baee6b4c9b262eb3b6adfda171647c4a622a77e4bd5b7bb0cceef0f7e0",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/metrics.json",
+      "sha256": "6c5d23974981af60fc522fb295e222a5a82cc99d074b74f14c34ee401d237d5f",
+      "bytes": 832
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/optimized_poses.json",
+      "sha256": "cdbe2c886830780b68d37362863218006ebd4a20c88934ffdf7cde8514ead583",
+      "bytes": 42549
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "sha256": "1833245fd994be83345256fc0d1f9bf40e087d85867d260702af7ac6b42bf294",
+      "bytes": 5752
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/analysis_complete.json",
+      "sha256": "99deaf07f0b495e938f26a608a6d2aa0960acd765ef8c0d58958ecf573f0ee60",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/metrics.json",
+      "sha256": "86474c492c23675d051a55ec980ddae594aad7b37e6abe2686e399ae69ff5d8d",
+      "bytes": 838
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/optimized_poses.json",
+      "sha256": "0ed0b2d830f0ee0e7b4336477b7e6bb4a4d13cf4e7f77976ccaff8e61df85b3a",
+      "bytes": 42489
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "sha256": "ebaeebbd5963522a8b6b5c1ac86177d5a379752be2c8b632666b9d327eb888bf",
+      "bytes": 5752
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/analysis_complete.json",
+      "sha256": "3122324030e25e2a35d698e3b53f1e0a7227d07c6a8a6ea3e5132354b0e9242f",
+      "bytes": 258
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/conditioning.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/metrics.json",
+      "sha256": "21a6cbbbcfe3e0df5003d17fedbe43262194185d790cb6052a376c07821101d7",
+      "bytes": 835
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/optimized_poses.json",
+      "sha256": "7233a6541f9ce3818091ea8b068e3f146a05475bfa5e92f5f37b02645a0ce187",
+      "bytes": 42506
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "sha256": "e7a7f2129ca8f9fb2dcc03edeb8891074c5844f426d2b670c30aa45900df484a",
+      "bytes": 5752
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/analysis_complete.json",
+      "sha256": "7823175e27f0a4a52c6d699c5184c182b71fd991d82cdd71d92c9bd72ada6636",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/conditioning.json",
+      "sha256": "7ce6f41272b01dcae0dfec1f484918f715fa4a3c707c35540fa5cefbc1d49d89",
+      "bytes": 11205
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/metrics.json",
+      "sha256": "c8e6a97887c7b2f26c100d8cb61893e28fe6a0484ced83aea54501dd0d436ff6",
+      "bytes": 823
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/optimized_poses.json",
+      "sha256": "27b51795e42fa90443703cebf034812eef69bed60f343585b3a70890cf80330c",
+      "bytes": 42590
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "sha256": "cd6c5a3ee259ddc1897999ee79bf2330f933540c730e3e66ac30d97b46dab67f",
+      "bytes": 5731
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/analysis_complete.json",
+      "sha256": "f4590f8c2a09822923eae158d6c6880317474c96c7101355afccc870e70260a5",
+      "bytes": 260
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/conditioning.json",
+      "sha256": "f42f1ad2556ccf98c190866030ee9b69ab2f2ce00530313ef07a5ba942fc1afb",
+      "bytes": 11204
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/metrics.json",
+      "sha256": "515a3278bf2acb4ef52080e052b9d3e45534153814d8658e5707a2a310ca0e35",
+      "bytes": 836
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/optimized_poses.json",
+      "sha256": "6a23b164a760a55db13f4a7476666f2763a086e3159d7a53fa4c1ac12c4d118c",
+      "bytes": 42529
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "sha256": "bdfb0ff2a5ef14eed18854c4ac591e74b17daa8317cbbd84f8bb4aa7ec704113",
+      "bytes": 5755
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/analysis_complete.json",
+      "sha256": "0f01c553de1cbae58de6fa1e64dc08162c633415cb971083f468bb562babed4a",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/conditioning.json",
+      "sha256": "4c7f9130fe658ef851c8d31be90d176e909a9cef9a96057787c3e3e54515fb58",
+      "bytes": 11204
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/metrics.json",
+      "sha256": "3ed207ac385a18b94f8088897c6b23880c83b02b85a13934e0670ac221688cfc",
+      "bytes": 831
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/optimized_poses.json",
+      "sha256": "9413ff3e2b46e6fee07537d597379d35884ad816e67b9f885e566d3319927391",
+      "bytes": 42576
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "sha256": "bd80129daf6dc697ba09a83f399fdf7d59209dd48dade8b23132ec1881388cbf",
+      "bytes": 5743
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/analysis_complete.json",
+      "sha256": "195dc8c081f4eca7cce64786d384855bb8b066028a305c0a4749cd05f7cd5af2",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/conditioning.json",
+      "sha256": "db0f92dc496440848a9bd0f5fc570fb649fe2af01e5eaae33408aa7821e5ab6e",
+      "bytes": 11214
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/metrics.json",
+      "sha256": "a72f43ace9ad1225907fd61e492956d95e82b40946ee98a630f18c70d88373e6",
+      "bytes": 828
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/optimized_poses.json",
+      "sha256": "602cf71447ce1b2b1b8f2d764ff8e33fa3231bc1f55c643aca5dd29a82fb1172",
+      "bytes": 42565
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "sha256": "dc700bcac183ddb488d44127ce1d01339df32e9c14b50c1395bfdebb556935a3",
+      "bytes": 5749
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/analysis_complete.json",
+      "sha256": "8511c85678e65a393b4071b777b7377ddbe023372026141376a56ed437eeb9e7",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/conditioning.json",
+      "sha256": "30965c81e6e652568c555c91ae96222dffd5fe2807d43fd7196f3ea8c6b4995f",
+      "bytes": 11217
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/metrics.json",
+      "sha256": "d44ddce4ffa8b51550a86d25720dc196b982e4bd7439d5754c59f99ee7c2f0b9",
+      "bytes": 831
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/optimized_poses.json",
+      "sha256": "f494751f737d8b2e44d61031cdec4bc2de389475316f3d4d8591342f0d744c9b",
+      "bytes": 42553
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "sha256": "dc83da13ef01526ba245c5d67a38e608a8b79a52007e407681ae1577847e5a71",
+      "bytes": 5749
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/conditioning.json",
+      "sha256": "a9524fed0e59360db6b220e95539b3de38cc98d4ce914029399239a8ab270228",
+      "bytes": 11214
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/optimized_poses.json",
+      "sha256": "5470881bfe96ada66b2418b0cd0232e7577cffb6e1e15cd8d5df54934053ab12",
+      "bytes": 42548
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/metrics.json",
+      "sha256": "74140cf75c3e3a6fe8960e837a881f14ffa4a33b90c4996a369080a23a8537f2",
+      "bytes": 837
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/analysis_complete.json",
+      "sha256": "288adb1d1578b519ec29b376512c8bd2318c7046f7c7cc9faf00100e2978126b",
+      "bytes": 260
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "sha256": "1bca714406b2311bd0aa622756d9635510bdd782eb51a27fd9710a156329b37e",
+      "bytes": 5755
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/conditioning.json",
+      "sha256": "02268d0c665408b4a63ca6a32d04bb7192f9f1de6893f038484dd190360bb2cc",
+      "bytes": 11213
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/optimized_poses.json",
+      "sha256": "8f5eb202b4d1bc0692bc30a7a05a5e64847ba92814b1a2df43a0f0fdde75fa42",
+      "bytes": 42507
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/metrics.json",
+      "sha256": "0e8563c88814b870c9183c12b90f3b5ce0a6c8422314402dd1b447f47c4b00ad",
+      "bytes": 826
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/analysis_complete.json",
+      "sha256": "4eede053bbde006301f5a574f19743249d00d0707e6bc51c34ea05969606d4ee",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "sha256": "f9e1e34f10060be1d954b0c6728937842f8490b9f09a3c0756c3908e4685e7f6",
+      "bytes": 5749
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/conditioning.json",
+      "sha256": "9a0e73dc6ec0d83c4120d0ac709cee4a5e17ce508e3bb0418a4d01ec6358acc9",
+      "bytes": 11209
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/optimized_poses.json",
+      "sha256": "65c3c0b392e07cb91764e9a95a758630fc66b59ba6be0848d3b433fc3fcdfe54",
+      "bytes": 42553
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/metrics.json",
+      "sha256": "3f5e3ae80db29072841c645ef0773efee4dc8675a9fb84543f5b9a963bd048d8",
+      "bytes": 832
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/analysis_complete.json",
+      "sha256": "70f3784368c16ac3e6ea89be62bb18ed3a5d0f1ad1366ea9daa561fd231d2b9f",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "sha256": "c2f9cd458c2d8fe3b63253f254cd91fdb09730fc8e1d8837bf6f34742b5eafee",
+      "bytes": 5749
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/conditioning.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/conditioning.json",
+      "sha256": "f4fbc2d3812065d110a54a25d408347927bae17cd90f6f475a76f38604f08bb4",
+      "bytes": 11212
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/optimized_poses.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/optimized_poses.json",
+      "sha256": "e6546ab71dab3ffc7dbc640576c88f0c073399d1d5049ed0aeaf5bd08753bd9d",
+      "bytes": 42521
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/train_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/train_complete.json",
+      "sha256": "86069d681161e715e334d72d8b0488c666de0af915be2eff672f3a49584a8645",
+      "bytes": 45
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/metrics.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/metrics.json",
+      "sha256": "c11246fc2d5e0aeb09e6ee2346b6449378975ac3d8c93494668415d439cd4755",
+      "bytes": 824
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/analysis_complete.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/analysis_complete.json",
+      "sha256": "135882207453a5c6d8e76c368fcedd515f10a97389cde5d4bff4a2eff8990240",
+      "bytes": 256
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "sha256": "e8f8556cfbfaf2da64312ae11b6848b724b128dfb58ddeb21b1812fe64b57d20",
+      "bytes": 5749
+    },
+    {
+      "source": "results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/dataparser_transforms.json",
+      "archive": "artifacts/warmup/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/dataparser_transforms.json",
+      "sha256": "cfde5a0b56196becaa05a0dfda415ff7ed14caa51291cce74e462a2a888e5c21",
+      "bytes": 309
+    },
+    {
+      "source": "results/alignment_gt_full/summary.csv",
+      "archive": "artifacts/alignment_gt_full/summary.csv",
+      "sha256": "18373ed32d4021eec9a82bcdcf3b55ba4839441690afb87804fab192d4940320",
+      "bytes": 1133
+    },
+    {
+      "source": "results/alignment_gt_full/report.md",
+      "archive": "artifacts/alignment_gt_full/report.md",
+      "sha256": "c1771aed45051098b0c783b00a1f508b4de4d9a1d6388a789eee7b67ef4d66ba",
+      "bytes": 1082
+    },
+    {
+      "source": "results/alignment_gt_full/findings.md",
+      "archive": "artifacts/alignment_gt_full/findings.md",
+      "sha256": "4aac0b16a69fcf30d0aed617b062d38e2142ff0e6eaf29d859cd4eaeda917e86",
+      "bytes": 1341
+    },
+    {
+      "source": "results/alignment_gt_full/metrics_comparison.png",
+      "archive": "artifacts/alignment_gt_full/metrics_comparison.png",
+      "sha256": "1445f5b224371957a4292abf94f02c94f3f927092360cfa5e3477898ce2a672b",
+      "bytes": 75797
+    },
+    {
+      "source": "results/alignment_gt_full/manifest.json",
+      "archive": "artifacts/alignment_gt_full/manifest.json",
+      "sha256": "87aeb1e3fd2da9866e76a2ac11868923322743e6e245067ec2c133a41348e759",
+      "bytes": 2748
+    },
+    {
+      "source": "results/alignment_gt_full/state.json",
+      "archive": "artifacts/alignment_gt_full/state.json",
+      "sha256": "3e4d08ae5363a3974cc8d546d4b127a403f23ab0686fd4302ea67513742ef52b",
+      "bytes": 26
+    },
+    {
+      "source": "results/alignment_gt_full/fixed/alignment.json",
+      "archive": "artifacts/alignment_gt_full/fixed/alignment.json",
+      "sha256": "f94d201773dfb8048631a8f47ff932eee68b10f65a04c9bffc06a71ee41b7110",
+      "bytes": 624
+    },
+    {
+      "source": "results/alignment_gt_full/naive/alignment.json",
+      "archive": "artifacts/alignment_gt_full/naive/alignment.json",
+      "sha256": "9872121e84a05ef856ed2596fd566e72c5fe62847c10b65785e111e6c191411a",
+      "bytes": 642
+    },
+    {
+      "source": "results/alignment_gt_full/camp/alignment.json",
+      "archive": "artifacts/alignment_gt_full/camp/alignment.json",
+      "sha256": "a31f1b4b80d3b238aa72596f3e50bd7d90b1d8dfdcab87f2bee97102393bd5b9",
+      "bytes": 645
+    },
+    {
+      "source": "results/alignment_gt_full/naive_warmup/alignment.json",
+      "archive": "artifacts/alignment_gt_full/naive_warmup/alignment.json",
+      "sha256": "23d135e3bde2c80aa92165286dcb11c557277e840b755510455861c432767a4b",
+      "bytes": 649
+    },
+    {
+      "source": "results/alignment_gt_full/camp_warmup/alignment.json",
+      "archive": "artifacts/alignment_gt_full/camp_warmup/alignment.json",
+      "sha256": "fb5a423334f6892643d760c13a30874e86df8006400b2cc97f08efc9d4d444fa",
+      "bytes": 650
+    },
+    {
+      "source": "results/alignment_gt_preview/summary.csv",
+      "archive": "artifacts/alignment_gt_preview/summary.csv",
+      "sha256": "2974bec6f8040b8d380aa378900d241ccb40afb50b0e77f164ebde8d5ce77dc1",
+      "bytes": 1110
+    },
+    {
+      "source": "results/alignment_gt_preview/report.md",
+      "archive": "artifacts/alignment_gt_preview/report.md",
+      "sha256": "482385a5fff3efa014a607e1b40c5d71724af797c27e0106ccfa17d00f10cf57",
+      "bytes": 1056
+    },
+    {
+      "source": "results/alignment_gt_preview/findings.md",
+      "archive": "artifacts/alignment_gt_preview/findings.md",
+      "sha256": "bf754f10718c74a9b575641c450a34d35bbe57364b84a108be9c3ecb84fced45",
+      "bytes": 1389
+    },
+    {
+      "source": "results/alignment_gt_preview/metrics_comparison.png",
+      "archive": "artifacts/alignment_gt_preview/metrics_comparison.png",
+      "sha256": "39a390ecdc90ae85a13375f05c48c16e4eb91b19eb6ba4252da3086f5a50b333",
+      "bytes": 78831
+    },
+    {
+      "source": "results/alignment_gt_preview/comparison_000.png",
+      "archive": "artifacts/alignment_gt_preview/comparison_000.png",
+      "sha256": "f9682e5dce944f152a9985477dbe384a7130da4e741ab4dcff4d21fe4b3e66e8",
+      "bytes": 427193
+    },
+    {
+      "source": "results/alignment_gt_preview/comparison_050.png",
+      "archive": "artifacts/alignment_gt_preview/comparison_050.png",
+      "sha256": "cf1d1a14b0dd035b3e145cb10c46068ad75a2d8106d004a81bc055351eb19633",
+      "bytes": 368750
+    },
+    {
+      "source": "results/alignment_gt_preview/comparison_100.png",
+      "archive": "artifacts/alignment_gt_preview/comparison_100.png",
+      "sha256": "b00166fd96f7bf2a9e26e4043a33d066deaa21b48ec85530b294a88778c66c93",
+      "bytes": 291885
+    },
+    {
+      "source": "results/alignment_gt_preview/manifest.json",
+      "archive": "artifacts/alignment_gt_preview/manifest.json",
+      "sha256": "2ce3b7007adcbbd48145c0b96d75c106211b34c72ae538f6161ddb6ad5387ff6",
+      "bytes": 2750
+    },
+    {
+      "source": "results/alignment_gt_preview/state.json",
+      "archive": "artifacts/alignment_gt_preview/state.json",
+      "sha256": "3e4d08ae5363a3974cc8d546d4b127a403f23ab0686fd4302ea67513742ef52b",
+      "bytes": 26
+    },
+    {
+      "source": "results/alignment_gt_preview/fixed/alignment.json",
+      "archive": "artifacts/alignment_gt_preview/fixed/alignment.json",
+      "sha256": "f94d201773dfb8048631a8f47ff932eee68b10f65a04c9bffc06a71ee41b7110",
+      "bytes": 624
+    },
+    {
+      "source": "results/alignment_gt_preview/naive/alignment.json",
+      "archive": "artifacts/alignment_gt_preview/naive/alignment.json",
+      "sha256": "9872121e84a05ef856ed2596fd566e72c5fe62847c10b65785e111e6c191411a",
+      "bytes": 642
+    },
+    {
+      "source": "results/alignment_gt_preview/camp/alignment.json",
+      "archive": "artifacts/alignment_gt_preview/camp/alignment.json",
+      "sha256": "a31f1b4b80d3b238aa72596f3e50bd7d90b1d8dfdcab87f2bee97102393bd5b9",
+      "bytes": 645
+    },
+    {
+      "source": "results/alignment_gt_preview/naive_warmup/alignment.json",
+      "archive": "artifacts/alignment_gt_preview/naive_warmup/alignment.json",
+      "sha256": "23d135e3bde2c80aa92165286dcb11c557277e840b755510455861c432767a4b",
+      "bytes": 649
+    },
+    {
+      "source": "results/alignment_gt_preview/camp_warmup/alignment.json",
+      "archive": "artifacts/alignment_gt_preview/camp_warmup/alignment.json",
+      "sha256": "fb5a423334f6892643d760c13a30874e86df8006400b2cc97f08efc9d4d444fa",
+      "bytes": 650
+    },
+    {
+      "source": "results/alignment_pose_audit/summary.csv",
+      "archive": "artifacts/alignment_pose_audit/summary.csv",
+      "sha256": "1ff417357488bf6c8895857ec67046bf2cddc60b699e96d542822b13c4fffa12",
+      "bytes": 5110
+    },
+    {
+      "source": "results/alignment_pose_audit/transforms.json",
+      "archive": "artifacts/alignment_pose_audit/transforms.json",
+      "sha256": "52a704820d2993959a23a4888220d3ddc4c4b0b820b373b4f44a83861a550535",
+      "bytes": 18841
+    },
+    {
+      "source": "results/alignment_pose_audit/source_fingerprints.json",
+      "archive": "artifacts/alignment_pose_audit/source_fingerprints.json",
+      "sha256": "f6a38d917be4b7dab6fc29c6b49e0aeef4d0da6b47c777c3c4907d790d68885c",
+      "bytes": 4161
+    }
+  ]
+}

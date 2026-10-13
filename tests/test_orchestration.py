@@ -81,7 +81,7 @@ class OrchestrationTests(unittest.TestCase):
     def test_resume_searches_older_checkpoint_after_empty_attempt(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            args = SimpleNamespace(steps=10, interval=2, run_dir=root, smoke=True)
+            args = SimpleNamespace(steps=10, interval=2, run_dir=root, smoke=True, camera_warmup_steps=3)
             entry = {'attempts': [str(root/'attempt_001'), str(root/'attempt_002')]}
             calls = []
             def latest(attempt, target):
@@ -95,6 +95,7 @@ class OrchestrationTests(unittest.TestCase):
                  patch.object(pipeline, 'run', side_effect=command_run):
                 with self.assertRaisesRegex(RuntimeError, 'stop after observing'):
                     pipeline.execute_case(args, pipeline.CASES[0], 'naive', entry, lambda: None)
+            self.assertEqual(calls[0][calls[0].index('--camera-warmup-steps')+1], 3)
             self.assertIn('--checkpoint', calls[0])
             self.assertEqual(calls[0][calls[0].index('--checkpoint')+1], root/'attempt_001/step-000000003.ckpt')
             self.assertEqual(len(entry['attempts']), 3)

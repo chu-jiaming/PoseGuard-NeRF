@@ -1,16 +1,16 @@
 # PoseGuard：独立串行位姿优化实验
 
-入口：`scripts/run_pose_optimization_pipeline.sh`。运行依赖本机已有的 `/root/miniconda3` Python 环境、Nerfstudio 1.1.5 和 CUDA；不需要 Codex 持续在线。
+入口：`scripts/run_pose_optimization_pipeline.sh`。运行依赖已激活的兼容 Python 环境、Nerfstudio 1.1.5 和 CUDA；新机器准备见 [REPRODUCING.md](REPRODUCING.md)；不需要 Codex 持续在线。
 
 ## 正式运行
 
 ```bash
-cd /root/workspace/poseguard-nerf
+cd /path/to/poseguard-nerf
 bash scripts/run_pose_optimization_pipeline.sh --preflight
 bash scripts/run_pose_optimization_pipeline.sh --dry-run
 
 tmux new-session -d -s poseopt \
-  'cd /root/workspace/poseguard-nerf && bash scripts/run_pose_optimization_pipeline.sh'
+  'cd /path/to/poseguard-nerf && bash scripts/run_pose_optimization_pipeline.sh'
 tmux attach -t poseopt
 ```
 
@@ -35,7 +35,7 @@ tail -f results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/train.log
 
 ```bash
 tmux new-session -d -s poseopt-resume \
-  'cd /root/workspace/poseguard-nerf && bash scripts/run_pose_optimization_pipeline.sh --resume --retry-failed'
+  'cd /path/to/poseguard-nerf && bash scripts/run_pose_optimization_pipeline.sh --resume --retry-failed'
 ```
 
 - `--resume` 校验代码、配置、数据、基线和关键依赖的指纹，跳过已验证的成功项，恢复中断项。已明确失败的项保留失败状态。
@@ -56,7 +56,7 @@ tmux new-session -d -s poseopt-resume \
 
 验证曲线使用抽样像素 batch 的 fine PSNR，因此会有采样噪声；最终 `ns-eval` 使用完整 test split 的 `fine_psnr/fine_ssim/fine_lpips`。梯度范数属于 latent 相机参数，两方法的参数空间不同；物理位姿更新幅度可用于辅助比较。depth 拼图统一以 near=2、far=6 映射灰度；原始 float 数组同时保存为 `.npy`。
 
-图像评估始终使用原始验证/测试相机，Sim(3) 对齐只用于位姿诊断，不调整测试相机或图像指标。原坐标误差反映绝对恢复与全局漂移，对齐误差辅助识别相对位姿是否改善。自动分析标记退化、停滞、振荡及图像/位姿指标不一致；原因解释只是待验证假设。单种子实验不提供统计显著性保证。
+本训练流水线的图像评估使用原始验证/测试相机，Sim(3) 仅用于位姿诊断。后续独立的 [对齐评估入口](ALIGNMENT_DIAGNOSTIC.md) 另行变换测试相机并输出对齐图像指标。原坐标误差反映绝对恢复与全局漂移，对齐误差辅助识别相对位姿是否改善。自动分析标记退化、停滞、振荡及图像/位姿指标不一致；原因解释只是待验证假设。单种子实验不提供统计显著性保证。
 
 ## 方法定义
 
@@ -69,7 +69,7 @@ R' = Exp(ω) R
  t' = t + Δt
 ```
 
-训练时在场景采样前更新 ray origin 与 direction，验证/测试不应用相机表。两方法的相机优化器均为 Adam（lr 从 1e-3 指数衰减至 1e-4），从第零步开始优化；无位姿正则、warmup、频率调度或内参优化。GT 只在模型和预条件构建完成后用于诊断。
+训练时在场景采样前更新 ray origin 与 direction，验证/测试不应用相机表。两方法的相机优化器均为 Adam（lr 从 1e-3 指数衰减至 1e-4），从第零步开始优化；默认无 warm-up；`--camera-warmup-steps` 可启用相机学习率渐增。无位姿正则、频率调度或内参优化。GT 只在模型和预条件构建完成后用于诊断。
 
 CamP-style 使用投影代理问题的完整六维 ZCA 白化，参考 [CamP 论文第 5 节](https://arxiv.org/html/2308.10902v2)：
 
@@ -84,7 +84,7 @@ P = (Σ + 0.1 diag(Σ) + 1e-8 I)^(-1/2)
 ## 快速验证
 
 ```bash
-PYTHONPATH=. /root/miniconda3/bin/python -m unittest discover -s tests -v
+PYTHONPATH=. python -m unittest discover -s tests -v
 bash scripts/run_pose_optimization_pipeline.sh \
   --smoke --run-dir results/poseopt_smoke_new --steps 4 --interval 2 --cases SV100-R1
 ```

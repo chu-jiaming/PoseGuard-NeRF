@@ -106,6 +106,10 @@ def verify_config(config_path, method, case, args):
             config.max_num_iterations != args.steps or config.machine.seed != 42 or
             Path(data).resolve() != (DATA/case[3]).resolve()):
         raise ValueError('Saved config does not match experiment')
+    schedule = config.optimizers['camera_opt']['scheduler']
+    if (schedule.warmup_steps != args.camera_warmup_steps or schedule.max_steps != args.steps
+            or schedule.lr_pre_warmup != 1e-8 or schedule.ramp != 'cosine'):
+        raise ValueError('Saved camera schedule mismatch')
     if config.pipeline.datamanager.camera_res_scale_factor != (.125 if args.smoke else 1.):
         raise ValueError('Saved resolution mismatch')
 
@@ -185,7 +189,8 @@ def execute_case(args, case, method, entry, persist):
         entry.setdefault('attempts', []).append(str(attempt))
         entry.update(stage='train', status='RUNNING'); persist()
         command = worker('train', '--method', method, '--case', name, '--data', DATA/directory,
-                         '--attempt', attempt, '--steps', args.steps, '--interval', args.interval, '--gt', GT)
+                         '--attempt', attempt, '--steps', args.steps, '--interval', args.interval, '--gt', GT,
+                         '--camera-warmup-steps', args.camera_warmup_steps)
         if checkpoint:
             command += ['--checkpoint', checkpoint]
         if args.smoke:
@@ -225,6 +230,7 @@ def report(args, state, baselines, label):
     rows = []
     images = args.run_dir/'figures'; images.mkdir(exist_ok=True)
     lines = ['# Pose optimization — '+label, '',
+             'Camera warm-up: %d steps; pre-warmup LR 1e-8; Nerfstudio cosine ramp.' % args.camera_warmup_steps,
              'Single seed 42; vanilla-NeRF; target %d steps. Fixed baselines: 30000 steps.' % args.steps,
              'Smoke results are pipeline checks, not comparable research results.' if args.smoke else
              'Test cameras remain in original coordinates. Sim(3) alignment is used only for pose diagnostics.', '',
@@ -350,11 +356,14 @@ def main():
     parser.add_argument('--retry-failed', action='store_true')
     parser.add_argument('--smoke', action='store_true')
     parser.add_argument('--steps', type=int, default=30000)
+    parser.add_argument('--camera-warmup-steps', type=int, default=0)
     parser.add_argument('--interval', type=int, default=1000)
     parser.add_argument('--cases', nargs='+', choices=[c[0] for c in CASES])
     args = parser.parse_args()
     if args.steps <= 0 or args.interval <= 0:
         parser.error('steps and interval must be positive')
+    if not 0 <= args.camera_warmup_steps < args.steps:
+        parser.error('camera-warmup-steps must be nonnegative and smaller than steps')
     if args.retry_failed and not args.resume:
         parser.error('--retry-failed requires --resume')
     if args.smoke and args.run_dir == ROOT/'results/poseopt_sv100':
@@ -371,6 +380,7 @@ def main():
         print('No training or results written.'); return 0
     state_path = args.run_dir/'state.json'
     settings = dict(steps=args.steps, interval=args.interval, smoke=args.smoke,
+                    camera_warmup_steps=args.camera_warmup_steps,
                     order=[method+'/'+c[0] for method in ('naive', 'camp') for c in args.selected])
     if state_path.exists():
         if not args.resume:

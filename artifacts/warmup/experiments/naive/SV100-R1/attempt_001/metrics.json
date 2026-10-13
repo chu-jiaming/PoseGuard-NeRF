@@ -1,0 +1,21 @@
+{
+  "experiment_name": "SV100-R1",
+  "method_name": "poseguard-naive",
+  "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+  "results": {
+    "psnr": 21.86933135986328,
+    "psnr_std": 1.290895700454712,
+    "coarse_psnr": 21.153648376464844,
+    "coarse_psnr_std": 0.7780818939208984,
+    "fine_psnr": 21.86933135986328,
+    "fine_psnr_std": 1.290895700454712,
+    "fine_ssim": 0.8142579793930054,
+    "fine_ssim_std": 0.03642008453607559,
+    "fine_lpips": 0.1111789345741272,
+    "fine_lpips_std": 0.007515077479183674,
+    "num_rays_per_sec": 28523.177734375,
+    "num_rays_per_sec_std": 120.39502716064453,
+    "fps": 0.04456746205687523,
+    "fps_std": 0.00018811726476997137
+  }
+}

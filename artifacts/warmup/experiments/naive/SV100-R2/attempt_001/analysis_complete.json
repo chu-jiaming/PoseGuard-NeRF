@@ -1,0 +1,9 @@
+{
+  "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+  "step": 29999,
+  "views": [
+    0,
+    50,
+    100
+  ]
+}

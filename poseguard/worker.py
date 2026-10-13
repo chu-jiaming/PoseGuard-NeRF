@@ -38,7 +38,11 @@ def train(args):
     config.vis = 'tensorboard'
     config.viewer.quit_on_train_completion = True
     config.steps_per_save = args.interval
-    config.optimizers['camera_opt']['scheduler'].max_steps = args.steps
+    camera_schedule = config.optimizers['camera_opt']['scheduler']
+    camera_schedule.max_steps = args.steps
+    camera_schedule.warmup_steps = args.camera_warmup_steps
+    camera_schedule.lr_pre_warmup = 1e-8
+    camera_schedule.ramp = 'cosine'
     if args.smoke:
         config.pipeline.datamanager.camera_res_scale_factor = .125
         config.pipeline.datamanager.train_num_rays_per_batch = 64
@@ -78,6 +82,7 @@ def train(args):
         if not all(torch.isfinite(value).all() for value in result[1].values()):
             raise FloatingPointError('Nonfinite training loss at step '+str(step))
         latest['loss'] = float(sum(result[1].values()).detach())
+        latest['camera_lr'] = trainer.optimizers.optimizers['camera_opt'].param_groups[0]['lr']
         return result
     pipeline.get_train_loss_dict = tracked_loss
     trace_path = args.attempt/'diagnostics.jsonl'
@@ -101,6 +106,7 @@ def train(args):
             random.setstate(python_rng); np.random.set_state(numpy_rng)
             pipeline.train()
         row = dict(step=step, train_loss=latest.get('loss'), val_psnr=val_psnr,
+                   camera_lr=latest.get('camera_lr'),
                    pose_gradient_norm=float(model.pose_latent.grad.norm()) if model.pose_latent.grad is not None else 0.,
                    translation_update_mean=float((delta[:, :3]-previous[:, :3]).norm(dim=-1).mean()),
                    rotation_update_deg_mean=float(torch.rad2deg((delta[:, 3:]-previous[:, 3:]).norm(dim=-1)).mean()),
@@ -170,6 +176,7 @@ def main():
     training.add_argument('--data', type=Path, required=True)
     training.add_argument('--attempt', type=Path, required=True)
     training.add_argument('--steps', type=int, required=True)
+    training.add_argument('--camera-warmup-steps', type=int, default=0)
     training.add_argument('--interval', type=int, default=1000)
     training.add_argument('--checkpoint', type=Path)
     analysis = sub.add_parser('analyze')
@@ -179,6 +186,8 @@ def main():
         item.add_argument('--gt', type=Path, required=True)
         item.add_argument('--smoke', action='store_true')
     args = parser.parse_args()
+    if args.command == 'train' and not 0 <= args.camera_warmup_steps < args.steps:
+        parser.error('camera-warmup-steps must be nonnegative and smaller than steps')
     (train if args.command == 'train' else analyze)(args)
 
 
