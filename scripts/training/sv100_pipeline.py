@@ -14,7 +14,8 @@ import sys
 from datetime import datetime, timezone
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = Path(os.environ.get('POSEGUARD_DATA', str(ROOT.parent/'data/nerf_synthetic'))).expanduser().resolve()
+sys.path.insert(0, str(ROOT))
+from scripts.runtime import DATA, RUN_ROOT, PATH_HELP, require_training
 GT = DATA / 'lego'
 CASES = [('SV100-GT', 'gt', 0.0, 'lego')]
 CASES += [('SV100-T'+label, 'translation', value, dataset) for label, value, dataset in [
@@ -152,34 +153,37 @@ def sanity(config, target):
 def summaries(rows, status):
     for name, subset in [('translation_sweep', [r for r in rows if r['perturbation_type'] in ['gt','translation']]),
                          ('rotation_sweep', [r for r in rows if r['perturbation_type'] in ['gt','rotation']]), ('full_summary', rows)]:
-        p = ROOT/'results'/('SV100_'+name+'.csv')
+        p = RUN_ROOT/'results'/('SV100_'+name+'.csv')
         with p.open('w', newline='') as f:
             w = csv.DictWriter(f, fieldnames=FIELDS); w.writeheader(); w.writerows(subset)
-    (ROOT/'results/SV100_pipeline_summary.txt').write_text(now()+' '+status+'\nNerfstudio 1.1.5; vanilla-nerf; 100 views; 30000 iterations\nTranslation magnitude unit: ratio of mean camera radius; rotation unit: degrees.\nGT is evaluated once and shared by both sweep tables. Metrics: fine_psnr/fine_ssim/fine_lpips from fresh ns-eval test split.\n'+ '\n'.join(r['case']+' '+r['status']+' PSNR='+str(r['psnr'])+' SSIM='+str(r['ssim'])+' LPIPS='+str(r['lpips']) for r in rows)+'\n')
+    (RUN_ROOT/'results/SV100_pipeline_summary.txt').write_text(now()+' '+status+'\nNerfstudio 1.1.5; vanilla-nerf; 100 views; 30000 iterations\nTranslation magnitude unit: ratio of mean camera radius; rotation unit: degrees.\nGT is evaluated once and shared by both sweep tables. Metrics: fine_psnr/fine_ssim/fine_lpips from fresh ns-eval test split.\n'+ '\n'.join(r['case']+' '+r['status']+' PSNR='+str(r['psnr'])+' SSIM='+str(r['ssim'])+' LPIPS='+str(r['lpips']) for r in rows)+'\n')
 
 def main():
+    require_training()
+    for directory in ('results', 'outputs', 'logs/gt', 'logs/translation', 'logs/rotation'):
+        (RUN_ROOT/directory).mkdir(parents=True, exist_ok=True)
     rows = []
     state = {'status':'RUNNING','start':now(),'pid':os.getpid(),'nerfstudio_version':version(),'order':[c[0] for c in CASES]}
-    state_path = ROOT/'results/pipeline_state.json'
+    state_path = RUN_ROOT/'results/pipeline_state.json'
     require(not state_path.exists(), 'Existing pipeline state: refusing result reuse')
     save(state_path, state)
     try:
         checks = {c[0]:validate(c) for c in CASES}
-        subprocess.run(['uv','pip','freeze','--python',sys.executable], stdout=(ROOT/'results/environment.txt').open('w'), check=True)
+        subprocess.run(['uv','pip','freeze','--python',sys.executable], stdout=(RUN_ROOT/'results/environment.txt').open('w'), check=True)
         summaries(rows, 'RUNNING')
         for case in CASES:
             name, kind, mag, directory = case
             state.update(case=name, stage='train'); save(state_path,state)
             require(validate(case) == checks[name], 'Dataset metadata changed after preflight')
             log('START '+name+' max_iterations=30000')
-            logs = ROOT/'logs'/kind; logs.mkdir(exist_ok=True)
-            result = ROOT/'results'/name; result.mkdir()
+            logs = RUN_ROOT/'logs'/kind; logs.mkdir(exist_ok=True)
+            result = RUN_ROOT/'results'/name; result.mkdir()
             exp = 'lego_sv100' if kind == 'gt' else directory
-            base = ROOT/'outputs'/exp
+            base = RUN_ROOT/'outputs'/exp
             require(not base.exists(), 'Output experiment already exists; refusing reuse: '+str(base))
-            before = set((ROOT/'outputs').rglob('config.yml'))
-            command(['ns-train','vanilla-nerf','--experiment-name',exp,'--output-dir','outputs','--max-num-iterations','30000','--vis','tensorboard','--viewer.quit-on-train-completion','True','--data',DATA/directory], logs/(name+'_train.log'))
-            configs = set((ROOT/'outputs').rglob('config.yml'))-before
+            before = set((RUN_ROOT/'outputs').rglob('config.yml'))
+            command(['ns-train','vanilla-nerf','--experiment-name',exp,'--output-dir',str(RUN_ROOT/'outputs'),'--max-num-iterations','30000','--vis','tensorboard','--viewer.quit-on-train-completion','True','--data',DATA/directory], logs/(name+'_train.log'))
+            configs = set((RUN_ROOT/'outputs').rglob('config.yml'))-before
             require(len(configs) == 1, 'Fresh config not uniquely identified')
             config = configs.pop().resolve()
             require(base.resolve() in config.parents, 'Unexpected config location')
@@ -208,7 +212,9 @@ def main():
         summaries(rows,'FAILED '+str(e)); log('FAILED END '+str(e)); raise
 
 if __name__ == '__main__':
-    os.chdir(ROOT)
+    if any(arg in ('--help', '-h') for arg in sys.argv[1:]):
+        print('Usage: uv run python scripts/training/sv100_pipeline.py [preflight | verify CONFIG DATA | sanity CONFIG OUTPUT]\n'+PATH_HELP)
+        raise SystemExit(0)
     if len(sys.argv) == 1: main()
     elif sys.argv[1] == 'preflight':
         for c in CASES: validate(c)

@@ -15,10 +15,11 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from poseguard.alignment import fit_sim3, transform_poses
 from scripts.training.sv100_pipeline import GT
+from scripts.runtime import BASELINE_SUMMARY, ORIGINAL_RUN, WARMUP_RUN, PATH_HELP, require_file, require_training
 
 
 def read(path):
-    return json.loads(Path(path).read_text())
+    return json.loads(require_file(path).read_text())
 
 
 def save(path, value):
@@ -29,12 +30,12 @@ def save(path, value):
 
 
 def jobs():
-    with (ROOT/'results/SV100_full_summary.csv').open() as f:
+    with require_file(BASELINE_SUMMARY).open() as f:
         fixed = next(row for row in csv.DictReader(f) if row['case']=='SV100-GT')
     result = [dict(name='fixed', config=fixed['config_path'], checkpoint=fixed['checkpoint_path'],
                    metrics=fixed['evaluation_result'])]
-    for directory, suffix in [('poseopt_sv100',''), ('poseopt_sv100_warmup2500','_warmup')]:
-        state = read(ROOT/'results'/directory/'state.json')
+    for directory, suffix in [(ORIGINAL_RUN,''), (WARMUP_RUN,'_warmup')]:
+        state = read(directory/'state.json')
         for method in ('naive','camp'):
             entry = state['experiments'][method+'/SV100-GT']
             if entry['status'] != 'SUCCESS':
@@ -53,6 +54,9 @@ def worker(args):
     out = args.output/job['name']; out.mkdir(parents=True, exist_ok=True)
     def configure(config):
         config.pipeline.datamanager.camera_res_scale_factor = args.resolution
+        config.pipeline.datamanager.data = GT
+        config.pipeline.datamanager.dataparser.data = GT
+        config.load_dir = Path(job['checkpoint']).resolve().parent
         config.load_step = 29999
         return config
     torch.manual_seed(42)
@@ -174,11 +178,15 @@ def report(output):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__)
+    parser=argparse.ArgumentParser(description=__doc__, epilog=PATH_HELP)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--full',action='store_true')
-    parser.add_argument('--worker',choices=[j['name'] for j in jobs()])
+    parser.add_argument('--worker',choices=['fixed','naive','camp','naive_warmup','camp_warmup'])
     args=parser.parse_args();args.output=args.output.resolve();args.resolution=1. if args.full else .25
+    require_training()
+    for job in jobs():
+        for key in ('config', 'checkpoint', 'metrics'):
+            require_file(job[key])
     if args.worker: return worker(args)
     args.output.mkdir(parents=True,exist_ok=True)
     manifest=dict(full=args.full,resolution=args.resolution,jobs=jobs())

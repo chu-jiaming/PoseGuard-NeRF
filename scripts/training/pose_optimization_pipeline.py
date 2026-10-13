@@ -18,7 +18,19 @@ from datetime import datetime, timezone
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from scripts.training.sv100_pipeline import CASES, DATA, GT, validate
-from poseguard.worker import save, load_checkpoint
+from scripts.runtime import BASELINE_SUMMARY, ORIGINAL_RUN, PATH_HELP, require_training, require_file
+
+
+def save(path, value):
+    path = Path(path); path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = path.with_suffix(path.suffix+'.tmp')
+    temporary.write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
+    temporary.replace(path)
+
+
+def load_checkpoint(path):
+    from poseguard.worker import load_checkpoint as load
+    return load(path)
 
 
 def now():
@@ -34,11 +46,14 @@ def digest(path):
 
 
 def run(command, log_path):
+    env = os.environ.copy()
+    env['PYTHONPATH'] = str(ROOT)+os.pathsep+env.get('PYTHONPATH', '')
+    env['NERFSTUDIO_METHOD_CONFIGS'] = 'poseguard-naive=poseguard.methods:naive,poseguard-camp=poseguard.methods:camp'
     print(now(), 'COMMAND', shlex.join(map(str, command)), 'LOG', log_path, flush=True)
     with Path(log_path).open('a') as output:
         output.write(now()+' '+shlex.join(map(str, command))+'\n'); output.flush()
         process = subprocess.Popen(list(map(str, command)), stdout=output, stderr=subprocess.STDOUT,
-                                   start_new_session=True)
+                                   start_new_session=True, env=env)
         try:
             rc = process.wait()
         except BaseException:
@@ -55,6 +70,7 @@ def run(command, log_path):
 
 
 def preflight():
+    require_training()
     if importlib.metadata.version('nerfstudio') != '1.1.5':
         raise RuntimeError('Requires Nerfstudio 1.1.5')
     import torch
@@ -64,7 +80,7 @@ def preflight():
     if subprocess.run(['pgrep', '-f', r'(^|/|[[:space:]])ns-train([[:space:]]|$)'], stdout=subprocess.DEVNULL).returncode == 0:
         raise RuntimeError('An external ns-train process is active')
     manifest = {case[0]: validate(case) for case in CASES}
-    with (ROOT/'results/SV100_full_summary.csv').open() as f:
+    with require_file(BASELINE_SUMMARY).open() as f:
         baselines = {row['case']: row for row in csv.DictReader(f)}
     fingerprint = {}
     for case in CASES:
@@ -345,8 +361,8 @@ def comparisons(args, state, baselines, persist):
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--run-dir', type=Path, default=ROOT/'results/poseopt_sv100')
+    parser = argparse.ArgumentParser(description=__doc__, epilog=PATH_HELP)
+    parser.add_argument('--run-dir', type=Path, default=ORIGINAL_RUN)
     parser.add_argument('--preflight', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     parser.add_argument('--resume', action='store_true')
@@ -363,9 +379,9 @@ def main():
         parser.error('camera-warmup-steps must be nonnegative and smaller than steps')
     if args.retry_failed and not args.resume:
         parser.error('--retry-failed requires --resume')
-    if args.smoke and args.run_dir == ROOT/'results/poseopt_sv100':
+    args.run_dir = args.run_dir.expanduser().resolve()
+    if args.smoke and args.run_dir == ORIGINAL_RUN:
         parser.error('--smoke requires a separate --run-dir')
-    args.run_dir = args.run_dir.resolve()
     args.selected = [c for c in CASES if not args.cases or c[0] in args.cases]
     baselines, manifest = preflight()
     if args.preflight:
@@ -468,5 +484,4 @@ def main():
 
 
 if __name__ == '__main__':
-    os.chdir(ROOT)
     sys.exit(main())

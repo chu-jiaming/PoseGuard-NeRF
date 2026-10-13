@@ -109,15 +109,17 @@ def main():
             "At least one perturbation must be non-zero."
         )
 
-    src = Path(args.src)
-    dst = Path(args.dst)
+    src = Path(args.src).expanduser().resolve()
+    dst = Path(args.dst).expanduser().absolute()
 
-    if dst.exists():
+    if dst.exists() or dst.is_symlink():
         raise FileExistsError(
             f"{dst} already exists. "
             "Remove it manually if you really want to regenerate it."
         )
 
+    if not (src / 'transforms_train.json').is_file():
+        parser.error('Missing training camera metadata: ' + str(src / 'transforms_train.json'))
     dst.mkdir(parents=True)
 
     # ============================================================

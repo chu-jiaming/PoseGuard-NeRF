@@ -2,13 +2,13 @@
 """Publish a compact interpretation and plot for a finished diagnostic run."""
 import argparse,csv
 from pathlib import Path
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-import numpy as np
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('directory',type=Path);args=parser.parse_args()
+    import matplotlib
+    matplotlib.use('Agg')
+    import matplotlib.pyplot as plt
+    import numpy as np
     with (args.directory/'summary.csv').open() as f:rows=list(csv.DictReader(f))
     if len(rows)!=5:raise ValueError('Wait for all five variants')
     by={r['method']:r for r in rows}
