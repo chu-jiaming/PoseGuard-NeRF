@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
-from scripts import pose_optimization_pipeline as pipeline
+from scripts.training import pose_optimization_pipeline as pipeline
 
 
 class OrchestrationTests(unittest.TestCase):

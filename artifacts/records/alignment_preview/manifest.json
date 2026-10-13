@@ -1,0 +1,36 @@
+{
+  "full": false,
+  "resolution": 0.25,
+  "jobs": [
+    {
+      "name": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt",
+      "metrics": "/root/workspace/poseguard-nerf/results/SV100-GT/metrics.json"
+    },
+    {
+      "name": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/metrics.json"
+    },
+    {
+      "name": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/metrics.json"
+    },
+    {
+      "name": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/metrics.json"
+    },
+    {
+      "name": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/metrics.json"
+    }
+  ]
+}
