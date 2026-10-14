@@ -19,5 +19,5 @@ jobs:
       - run: uv run python -m unittest discover -s tests -p "test_script_portability.py" -v
       - run: uv run python -m unittest discover -s tests -p "test_orchestration.py" -v
       - run: uv run python -m unittest discover -s tests -p "test_alignment.py" -v
-      - run: uv run python scripts/analysis/analyze_warmup_results.py --plots
+      - run: uv run python scripts/analysis/analyze_warmup_results.py --plots --diagnostics
       - run: uv run python scripts/showcase/make_figures.py --output "$RUNNER_TEMP/figures"

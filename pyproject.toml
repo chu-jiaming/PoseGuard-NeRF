@@ -1,6 +1,6 @@
 [project]
 name = "poseguard-nerf"
-version = "0.1.0"
+version = "1.0.0"
 description = "Controlled study of camera-pose perturbation, joint pose optimization and global coordinate drift in NeRF."
 readme = "README.md"
 license = { text = "MIT" }

@@ -9,11 +9,11 @@ No GPU, dataset or checkpoint is needed.
 
 ```bash
 uv sync --extra analysis
-uv run python scripts/analysis/analyze_warmup_results.py --plots
+uv run python scripts/analysis/analyze_warmup_results.py --plots --diagnostics
 ```
 
 This reads `artifacts/analysis/pose_optimization/` and `artifacts/analysis/warmup/`
-and writes the paired CSV, aggregate JSON, report and plot to
+and writes the paired CSV, aggregate JSON, report and plots to
 `results/published_analysis/`. `--original` / `--warmup` select other directories
 containing `summary.csv`; `--output` changes the destination. It only re-aggregates
 existing metrics; nothing is trained or rendered.
@@ -121,8 +121,10 @@ uv run --no-sync python scripts/analysis/analyze_warmup_results.py \
   --plots
 ```
 
-`--diagnostics` additionally plots early pose drift; it needs the full run
-directories with the `diagnostics.jsonl` files referenced by `state.json`.
+`--diagnostics` additionally plots early pose drift. For new runs it needs the
+full run directories with the `diagnostics.jsonl` files referenced by `state.json`;
+with the default published inputs it reads the archived GT traces in
+`artifacts/analysis/training_curves/diagnostics/`.
 
 ## 6. Pose audit and aligned rendering
 

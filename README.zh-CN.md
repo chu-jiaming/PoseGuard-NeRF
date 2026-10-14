@@ -93,7 +93,7 @@ uv run python scripts/analysis/analyze_warmup_results.py --plots
 uv run python -m unittest discover -s tests -p "test_alignment.py" -v
 ```
 
-训练、断点续跑、位姿审计和对齐渲染都需要 CUDA GPU，步骤见 [docs/RUNNING.md](docs/RUNNING.md)（英文）。
+GT 对齐表和 T5 对比所用的 7 个最终 checkpoint 发布在 [v1.0.0 Release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0)，附 SHA-256 校验和与加载步骤。训练、断点续跑、位姿审计和对齐渲染都需要 CUDA GPU，步骤见 [docs/RUNNING.md](docs/RUNNING.md)（英文）。
 
 ## 目录结构
 

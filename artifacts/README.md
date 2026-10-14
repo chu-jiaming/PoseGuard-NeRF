@@ -22,7 +22,7 @@
 | 内容 | 入口 |
 |---|---|
 | 固定相机基线 | [9 条件汇总](analysis/baseline/SV100_full_summary.csv)、[平移对照](analysis/baseline/SV100_translation_sweep.csv)、[旋转对照](analysis/baseline/SV100_rotation_sweep.csv) |
-| 首轮三方法比较 | [27 行汇总](analysis/pose_optimization/summary.csv)、[历史报告](analysis/pose_optimization/report.md)、[Naive 失败分析](analysis/pose_optimization/naive_failure_analysis.md) |
+| 首轮三方法比较 | [27 行汇总](analysis/pose_optimization/summary.csv) |
 | Warm-up 配对比较 | [汇总](analysis/warmup/summary.csv)、[配对差值](analysis/warmup/paired_metrics.csv)、[统计](analysis/warmup/aggregate_metrics.json)、[阶段报告](analysis/warmup/report.md) |
 | GT 完整对齐评估 | [汇总](analysis/alignment_full/summary.csv)、[报告](analysis/alignment_full/report.md)、[结论](analysis/alignment_full/findings.md) |
 | GT 预览对齐评估 | [汇总](analysis/alignment_preview/summary.csv)、[报告](analysis/alignment_preview/report.md)、[结论](analysis/alignment_preview/findings.md) |
@@ -44,10 +44,10 @@ README 中的渲染图和视频由服务器在同一批 checkpoint 上推理生�
 
 ## 读取与重新分析
 
-在仓库根目录运行 `uv run python scripts/analysis/analyze_warmup_results.py`，可从归档 CSV 重新计算配对统计，默认输出到 `results/published_analysis/`。加 `--plots` 可重画质量对比图，需要 NumPy 和 Matplotlib。
+在仓库根目录运行 `uv run python scripts/analysis/analyze_warmup_results.py`，可从归档 CSV 重新计算配对统计，默认输出到 `results/published_analysis/`。加 `--plots` 可重画质量对比图，加 `--diagnostics` 可用 `analysis/training_curves/diagnostics/` 中归档的 GT 轨迹重画早期漂移图，两者都需要 NumPy 和 Matplotlib。
 
-发布档案不含原始数据、checkpoint、TensorBoard、原始渲染数组或完整训练日志。重新渲染需要原模型和数据；重画早期漂移需要原服务器的 `diagnostics.jsonl`。完整评估使用 200 张 800×800 图，预览使用 20 张 200×200 图，两者的指标应分开比较。
+发布档案不含原始数据、checkpoint、TensorBoard、原始渲染数组或完整训练日志。重新渲染需要原模型和数据，7 个最终 checkpoint 见 [v1.0.0 Release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0)。完整评估使用 200 张 800×800 图，预览使用 20 张 200×200 图，两者的指标应分开比较。
 
-两份首轮历史报告保留当时文字及未打包图片的路径。Warm-up 阶段报告早于对齐诊断，其中 GT 对齐的后续工作已完成，多种子实验未执行；后续对齐解释见对应 findings。
+Warm-up 阶段报告早于对齐诊断，其中 GT 对齐的后续工作已完成，多种子实验未执行；后续对齐解释见对应 findings。
 
 `records/`、配置及完成标记中的服务器绝对路径属于历史来源信息，不能在新机器直接用于恢复。所有现存记录均保留，目录整理没有重新训练或重新计算图像指标。通过 Git status 和 Git diff 查看档案变更。
