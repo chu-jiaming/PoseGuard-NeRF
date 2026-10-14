@@ -3,7 +3,8 @@
 
 Metric figures read artifacts/ only. Render figures and the GIF also need the
 extracted delivery_<date>/ directory (800x800 stills, 400x400 video); pass it with
---delivery or they are skipped. The GIF needs ffmpeg on PATH.
+--delivery or they are skipped. The GIF needs ffmpeg on PATH. The camera figure
+needs the public NeRF-Synthetic lego/transforms_train.json (--gt-transforms).
 """
 import argparse
 import csv
@@ -11,8 +12,10 @@ import json
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 
 ROOT = Path(__file__).resolve().parents[2]
+sys.path.insert(0, str(ROOT))
 ARTIFACTS = ROOT/'artifacts/analysis'
 CONDITIONS = ['SV100-GT', 'SV100-T0.5', 'SV100-T1', 'SV100-T2', 'SV100-T5',
               'SV100-R0.5', 'SV100-R1', 'SV100-R2', 'SV100-R5']
@@ -175,6 +178,57 @@ def perturbation_grid(plt, stills, output, view=175):
     fig.savefig(output/'perturbation_grid.png', dpi=100); plt.close(fig)
 
 
+def perturbed_poses(gt_transforms, condition_args):
+    """Re-create a perturbed training split with the original script and seed."""
+    import tempfile
+    with tempfile.TemporaryDirectory() as directory:
+        source = Path(directory)/'lego'
+        source.mkdir()
+        shutil.copy2(gt_transforms, source/'transforms_train.json')
+        subprocess.run([sys.executable, str(ROOT/'scripts/data/perturb_poses.py'), '--src', str(source),
+                        '--dst', str(Path(directory)/'noisy'), *condition_args, '--seed', '42'],
+                       check=True, capture_output=True)
+        frames = json.loads((Path(directory)/'noisy/transforms_train.json').read_text())['frames']
+    return [frame['transform_matrix'] for frame in frames]
+
+
+def camera_correction(plt, gt_transforms, output, magnify=10):
+    """T5 training-camera centers: injected noise vs. what Naive + warm-up leaves after optimization."""
+    import numpy as np
+    from poseguard.alignment import fit_sim3, transform_poses
+    gt = np.array([f['transform_matrix'] for f in json.loads(Path(gt_transforms).read_text())['frames']])[:, :3]
+    noisy = np.array(perturbed_poses(gt_transforms, ['--translation-ratio', '0.05']))[:, :3]
+    record = json.loads((ROOT/'artifacts/experiments/warmup/naive/SV100-T5/optimized_poses.json').read_text())
+    optimized = np.array(record['poses'])[:, :3]
+    stored = record['initial_errors'].get('raw', record['initial_errors'])['translation_radius_pct_mean']
+    radius = np.linalg.norm(gt[:, :, 3], axis=1).mean()
+    error = lambda poses: np.linalg.norm(poses[:, :, 3]-gt[:, :, 3], axis=1).mean()
+    if abs(100*error(noisy)/radius-stored) > 1e-6:
+        raise ValueError('Regenerated perturbation does not match the archived run')
+    aligned = transform_poses(optimized, fit_sim3(optimized[:, :, 3], gt[:, :, 3]))
+    panels = [(noisy, '#52514e', 'Injected noise (5%% translation)\nmean camera-center error %.3f' % error(noisy)),
+              (optimized, BLUE, 'After Naive + warm-up, 30k steps\nmean error %.3f, %.3f after one global Sim(3)'
+               % (error(optimized), error(aligned)))]
+    fig = plt.figure(figsize=(11, 4.4))
+    for index, (poses, color, title) in enumerate(panels, 1):
+        ax = fig.add_subplot(1, 2, index, projection='3d')
+        centers, offsets = gt[:, :, 3], (poses[:, :, 3]-gt[:, :, 3])*magnify
+        for start, offset in zip(centers, offsets):
+            ax.plot(*np.stack((start, start+offset)).T, color=color, linewidth=1.6, solid_capstyle='round')
+        ax.scatter(*centers.T, s=12, color='#b5b4ae', depthshade=False)
+        ax.scatter([0], [0], [0], s=60, marker='s', color=INK)
+        ax.text(0, 0, -.7, 'scene', ha='center', fontsize=9, color=MUTED)
+        ax.set_title(title, fontsize=10.5, loc='left', y=1.0, pad=0)
+        ax.view_init(elev=24, azim=-60)
+        ax.set_box_aspect((1, 1, .55), zoom=1.2)
+        ax.set_xlim(-5, 5); ax.set_ylim(-5, 5); ax.set_zlim(-.8, 5.2)
+        ax.set_axis_off()
+    fig.subplots_adjust(left=0, right=1, bottom=-.08, top=.86, wspace=0)
+    fig.text(.5, .015, 'Lego training cameras (gray, %.2f units from the scene). Segments: camera-center error, '
+             'drawn ×%d.' % (radius, magnify), ha='center', fontsize=9.5, color=MUTED)
+    fig.savefig(output/'camera_correction.png', dpi=130); plt.close(fig)
+
+
 def side_by_side_gif(delivery, output):
     ffmpeg = shutil.which('ffmpeg')
     if not ffmpeg:
@@ -188,6 +242,7 @@ def side_by_side_gif(delivery, output):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--delivery', type=Path, help='extracted delivery_<date>/ directory (renders, videos)')
+    parser.add_argument('--gt-transforms', type=Path, help='NeRF-Synthetic lego/transforms_train.json')
     parser.add_argument('--output', type=Path, default=ROOT/'docs/assets')
     args = parser.parse_args()
     import matplotlib
@@ -201,6 +256,8 @@ def main():
         hero(plt, args.delivery/'stills', args.output)
         perturbation_grid(plt, args.delivery/'stills', args.output)
         side_by_side_gif(args.delivery, args.output)
+    if args.gt_transforms:
+        camera_correction(plt, args.gt_transforms, args.output)
     for path in sorted(args.output.iterdir()):
         print('%-28s %7.0f KB' % (path.name, path.stat().st_size/1024))
 
