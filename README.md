@@ -70,6 +70,12 @@ Fixed cameras win only with exact poses or 0.5% translation noise. In the
 other seven noisy conditions Naive + warm-up is best in six and 0.09 dB behind
 CamP-style + warm-up in the seventh (2° rotation).
 
+The recovered cameras show why. Joint optimization pulls the noisy training
+cameras back to within 0.025 scene units on average (from 0.16); removing one
+global similarity transform brings that to 0.016.
+
+![Training-camera center errors before and after joint pose optimization, magnified 10x](docs/assets/camera_correction.png)
+
 ### 2. Most of the "drop from perfect poses" is coordinate drift
 
 ![Ground truth, fixed-camera, naive raw and naive aligned renders with per-pixel error maps](docs/assets/hero_drift.png)

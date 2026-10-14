@@ -162,7 +162,10 @@ With that directory available locally:
 uv run python scripts/showcase/import_delivery.py path/to/delivery_20261014
 
 # Rebuild every figure in docs/assets/ (the GIF needs ffmpeg on PATH).
-uv run python scripts/showcase/make_figures.py --delivery path/to/delivery_20261014
+# --gt-transforms is the public NeRF-Synthetic lego/transforms_train.json; the T5
+# perturbation is regenerated from it with seed 42 and checked against the archive.
+uv run python scripts/showcase/make_figures.py --delivery path/to/delivery_20261014 \
+  --gt-transforms path/to/nerf_synthetic/lego/transforms_train.json
 ```
 
 ## 8. Tests and help
