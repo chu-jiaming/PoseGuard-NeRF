@@ -29,10 +29,9 @@
 
 ```mermaid
 flowchart LR
-    A["Lego，GT 位姿"] --> B["扰动训练相机<br/>无 · T 0.5–5% · R 0.5–5°"]
-    B --> C["训练 30k 步<br/>Fixed · Naive · CamP-style<br/>± 相机学习率 warm-up"]
-    C --> D["原坐标测试指标<br/>使用 GT 测试相机"]
-    C --> E["位姿审计<br/>训练相机中心拟合 Sim(3)"]
+    B["扰动 Lego 训练相机<br/>无 · T 0.5–5% · R 0.5–5°"] --> C["训练 30k 步<br/>Fixed · Naive · CamP-style<br/>± 学习率 warm-up"]
+    C --> D["原坐标测试指标"]
+    C --> E["位姿审计<br/>训练相机拟合 Sim(3)"]
     E --> F["对齐后测试指标<br/>网络冻结"]
 ```
 

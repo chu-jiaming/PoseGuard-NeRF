@@ -39,10 +39,9 @@ and a Sim(3) alignment diagnostic that separates *worse reconstruction* from
 
 ```mermaid
 flowchart LR
-    A["Lego, GT poses"] --> B["Perturb training cameras<br/>none · T 0.5–5% · R 0.5–5°"]
-    B --> C["Train 30k steps<br/>Fixed · Naive · CamP-style<br/>± camera LR warm-up"]
-    C --> D["Raw test metrics<br/>GT test cameras"]
-    C --> E["Pose audit<br/>Sim(3) on train camera centers"]
+    B["Perturb Lego training cameras<br/>none · T 0.5–5% · R 0.5–5°"] --> C["Train 30k steps<br/>Fixed · Naive · CamP-style<br/>± LR warm-up"]
+    C --> D["Raw test metrics"]
+    C --> E["Pose audit<br/>Sim(3) on train cameras"]
     E --> F["Aligned test metrics<br/>frozen network"]
 ```
 
