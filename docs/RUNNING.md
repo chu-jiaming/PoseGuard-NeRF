@@ -134,13 +134,7 @@ These reuse the trained models and poses; nothing is retrained.
 # Audit all 36 optimized pose sets (CPU + NumPy).
 uv run --no-sync python scripts/evaluation/audit_pose_alignment.py
 
-# GT condition, low-resolution preview.
-bash scripts/evaluation/run_alignment_diagnostic.sh \
-  --output "$POSEGUARD_RUN_ROOT/results/alignment_preview"
-uv run --no-sync python scripts/analysis/summarize_alignment.py \
-  "$POSEGUARD_RUN_ROOT/results/alignment_preview"
-
-# GT condition, full test set.
+# GT condition, full test set (without --full: a quick 20-view, 200 x 200 check).
 bash scripts/evaluation/run_alignment_diagnostic.sh \
   --output "$POSEGUARD_RUN_ROOT/results/alignment_full" --full
 uv run --no-sync python scripts/analysis/summarize_alignment.py \

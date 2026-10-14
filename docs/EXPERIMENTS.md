@@ -9,7 +9,7 @@ independent training from scratch; no run was tuned on test images.
 | --- | --- |
 | Training runs | 9 pose conditions × 5 methods = **45 runs**, 30,000 steps each, seed 42 |
 | Pose audit | 9 conditions × 4 pose-optimizing methods = **36 saved pose sets**, no training |
-| Aligned evaluation | GT condition × 5 methods, preview (20 views) and full (200 views), no training |
+| Aligned evaluation | GT condition × 5 methods, all 200 test views, no training |
 | Showcase renders | GT, T1, T5 and R5 conditions × 5 methods, 4 views, plus 4 orbit videos, no training |
 
 ## Shared training configuration
@@ -95,7 +95,6 @@ Results: [`artifacts/analysis/pose_audit/`](../artifacts/analysis/pose_audit/).
 
 | Evaluation | Condition | Methods | Test views | Resolution | Raw metrics | Aligned metrics |
 | --- | --- | --- | --- | --- | --- | --- |
-| Preview | SV100-GT | all 5 | indices 0, 10, …, 190 (20) | 200 × 200 | re-rendered | re-rendered |
 | Full | SV100-GT | all 5 | all 200 | 800 × 800 | reused from the original evaluation of the same checkpoint | re-rendered |
 
 | Item | Setting |
