@@ -1,0 +1,34 @@
+[
+  {
+    "condition": "SV100-GT",
+    "method": "fixed",
+    "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt",
+    "resolved_path": "/root/autodl-tmp/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt",
+    "bytes": 23071966,
+    "sha256": "c3d47101d4df1e2039ba3aa1667a7c1c98c7d12fb2e1b5d89cb1b8d31c785a6e"
+  },
+  {
+    "condition": "SV100-GT",
+    "method": "naive_warmup",
+    "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+    "resolved_path": "/root/autodl-tmp/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+    "bytes": 23100732,
+    "sha256": "1118fdccb527a71bcc5d8d966839513978c1d4836628d88796637f3ddc23b78a"
+  },
+  {
+    "condition": "SV100-T5",
+    "method": "fixed",
+    "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/nerfstudio_models/step-000029999.ckpt",
+    "resolved_path": "/root/autodl-tmp/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/nerfstudio_models/step-000029999.ckpt",
+    "bytes": 23071966,
+    "sha256": "89134af0a04380cea1744aa189003cc7a2b070a0ab636b2db8508254992b1795"
+  },
+  {
+    "condition": "SV100-T5",
+    "method": "naive_warmup",
+    "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+    "resolved_path": "/root/autodl-tmp/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+    "bytes": 23100732,
+    "sha256": "bc4bfb89aa4f9f1217bab8afeedb55de5161d0a0ef7f576d96efe62d9a39c724"
+  }
+]
