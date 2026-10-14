@@ -1,161 +1,149 @@
-## 实验配置
+# PoseGuard-NeRF
 
-### 共享训练配置
+**When does joint camera-pose optimization help NeRF, and when does it just move the world?**
 
-| 配置项 | 设置 |
-| --- | --- |
-| 数据集与场景 | NeRF-Synthetic Lego |
-| 数据划分 | 训练 100 张、验证 100 张、测试 200 张 |
-| 图像分辨率 | 800 × 800 |
-| NeRF 主干 | Nerfstudio 1.1.5 vanilla-NeRF，coarse/fine 两个 field |
-| 训练初始化 | 每次从头训练 |
-| 训练随机种子 | 42，单种子 |
-| 每次训练步数 | 30,000 |
-| 训练 ray batch | 1024 |
-| 每条 ray 的采样配置 | coarse 64，importance 128 |
-| Near / far | 2 / 6 |
-| 背景 | 白色 |
-| Blender 数据尺度 | scale_factor = 1 |
-| 场景优化器 | RAdam，学习率 5e-4，eps = 1e-8，无学习率调度 |
-| 损失 | coarse 与 fine RGB MSE，权重均为 1 |
-| 混合精度 | 关闭 |
-| 相机内参 | 固定 |
-| 验证与测试相机 | 使用原始 GT 位姿，不应用训练相机修正表 |
+[![tests](https://github.com/chu-jiaming/PoseGuard-NeRF/actions/workflows/tests.yml/badge.svg)](https://github.com/chu-jiaming/PoseGuard-NeRF/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Nerfstudio](https://img.shields.io/badge/Nerfstudio-1.1.5-6C63FF?style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
-### 训练实验（每行一次独立训练）
+English | [中文](README.zh-CN.md)
 
-| 编号 | 位姿条件 | 方法 | 平移扰动 | 旋转扰动 | 位姿参数化 | 相机优化器 | 相机学习率日程 | Warm-up 步数 | 训练步数 | Seed |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | SV100-GT | Fixed | 0 | 0° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 2 | SV100-GT | Naive | 0 | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 3 | SV100-GT | CamP-style | 0 | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 4 | SV100-GT | Naive + warm-up | 0 | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 5 | SV100-GT | CamP-style + warm-up | 0 | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 6 | SV100-T0.5 | Fixed | 0.5% | 0° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 7 | SV100-T0.5 | Naive | 0.5% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 8 | SV100-T0.5 | CamP-style | 0.5% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 9 | SV100-T0.5 | Naive + warm-up | 0.5% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 10 | SV100-T0.5 | CamP-style + warm-up | 0.5% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 11 | SV100-T1 | Fixed | 1% | 0° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 12 | SV100-T1 | Naive | 1% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 13 | SV100-T1 | CamP-style | 1% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 14 | SV100-T1 | Naive + warm-up | 1% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 15 | SV100-T1 | CamP-style + warm-up | 1% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 16 | SV100-T2 | Fixed | 2% | 0° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 17 | SV100-T2 | Naive | 2% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 18 | SV100-T2 | CamP-style | 2% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 19 | SV100-T2 | Naive + warm-up | 2% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 20 | SV100-T2 | CamP-style + warm-up | 2% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 21 | SV100-T5 | Fixed | 5% | 0° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 22 | SV100-T5 | Naive | 5% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 23 | SV100-T5 | CamP-style | 5% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 24 | SV100-T5 | Naive + warm-up | 5% | 0° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 25 | SV100-T5 | CamP-style + warm-up | 5% | 0° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 26 | SV100-R0.5 | Fixed | 0 | 0.5° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 27 | SV100-R0.5 | Naive | 0 | 0.5° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 28 | SV100-R0.5 | CamP-style | 0 | 0.5° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 29 | SV100-R0.5 | Naive + warm-up | 0 | 0.5° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 30 | SV100-R0.5 | CamP-style + warm-up | 0 | 0.5° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 31 | SV100-R1 | Fixed | 0 | 1° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 32 | SV100-R1 | Naive | 0 | 1° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 33 | SV100-R1 | CamP-style | 0 | 1° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 34 | SV100-R1 | Naive + warm-up | 0 | 1° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 35 | SV100-R1 | CamP-style + warm-up | 0 | 1° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 36 | SV100-R2 | Fixed | 0 | 2° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 37 | SV100-R2 | Naive | 0 | 2° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 38 | SV100-R2 | CamP-style | 0 | 2° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 39 | SV100-R2 | Naive + warm-up | 0 | 2° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 40 | SV100-R2 | CamP-style + warm-up | 0 | 2° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 41 | SV100-R5 | Fixed | 0 | 5° | 固定输入位姿 | 无 | 无 | 0 | 30,000 | 42 |
-| 42 | SV100-R5 | Naive | 0 | 5° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 43 | SV100-R5 | CamP-style | 0 | 5° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-3 → 1e-4，指数衰减 | 0 | 30,000 | 42 |
-| 44 | SV100-R5 | Naive + warm-up | 0 | 5° | 六维 SO(3) × R³，δ = z | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
-| 45 | SV100-R5 | CamP-style + warm-up | 0 | 5° | 六维预条件参数化，δ = Pz | Adam，eps = 1e-8 | 1e-8 → 1e-3 渐增，再指数衰减至 1e-4 | 2500 | 30,000 | 42 |
+<p align="center">
+  <img src="docs/assets/t5_side_by_side.gif" width="560" alt="Orbit renders of the Lego scene trained with 5% camera translation noise: fixed cameras on the left are blurry, joint pose optimization with warm-up on the right is sharp">
+  <br>
+  <sub>Lego with 5% translation noise on every training camera. Left: fixed cameras, 14.1 dB.
+  Right: joint pose optimization with a camera learning-rate warm-up, 22.7 dB. Same data, same 30k steps.</sub>
+</p>
 
-### 扰动与位姿优化配置
+A controlled study of NeRF under noisy camera poses: **45 training runs**
+(9 pose-noise levels × 5 methods) on Nerfstudio's vanilla-NeRF, plus pose audits
+and a Sim(3) alignment diagnostic that separates *worse reconstruction* from
+*a reconstruction that is fine but sits in a shifted coordinate frame*.
 
-| 扰动配置项 | 设置 |
-| --- | --- |
-| 扰动对象 | 仅训练相机外参；图像、内参、验证与测试位姿保持不变 |
-| 平移幅度基准 | GT 训练相机到轨迹中心的平均半径 |
-| 平移生成方式 | 每台相机随机单位方向，位移长度为指定比例 × 平均半径 |
-| 旋转生成方式 | 每台相机随机世界坐标轴，按指定角度左乘旋转矩阵 |
-| 扰动随机种子 | seed = 42；平移生成器使用 42，旋转生成器使用 43 |
-| 方法间数据控制 | 各方法复用相同的扰动数据 |
+## TL;DR
 
-| 位姿优化配置项 | 设置 |
-| --- | --- |
-| 初始位姿修正 | 全零 |
-| 位姿更新方式 | 世界坐标平移叠加，axis-angle 旋转左乘 |
-| GT 位姿监督、位姿正则、固定锚点 | 均不启用 |
-| 内参优化、频率 coarse-to-fine 调度 | 均不启用 |
-| Warm-up 曲线 | Nerfstudio 的 cosine ramp：1e-8 + (1e-3 − 1e-8) × sin(πs / 5000)，0 ≤ s < 2500 |
-| CamP-style 代理点 | 每台相机 4096 个；像素均匀采样，沿单位 ray 的距离在 [2, 6] 均匀采样 |
-| 代理采样种子 | 隔离 CPU generator，seed = 42 |
-| 预条件构建 | 初始位姿处投影 Jacobian；Σ = JᵀJ / 4096；P = (Σ + 0.1 diag(Σ) + 1e-8 I)^(−1/2) |
-| 预条件数值与更新 | CPU float64 计算，转 float32 保存；训练中固定 |
+- **Small pose errors wreck fixed-camera NeRF.** Test PSNR falls from 27.1 dB to
+  14.1 dB at 5% translation noise and to 12.0 dB at 5° rotation noise.
+- **Joint pose optimization recovers much of it,** and a 2,500-step camera
+  learning-rate warm-up makes the naive version better in **9/9** conditions
+  (+4.3 dB on average; at 5% translation noise, 14.1 → 22.7 dB).
+- **But turning it on from perfect poses *lowers* PSNR from 27.1 to 17.9 dB.**
+  The diagnosis: the reconstruction drifts as a whole. A Sim(3) fitted only on
+  training camera centers, with the network frozen, recovers **+5.5 dB** (Naive)
+  and **+6.1 dB** (CamP-style). Raw test metrics conflate scene quality with
+  global coordinate drift.
 
-### 位姿对齐审计（每行一组保存位姿）
+## Method
 
-| 编号 | 位姿条件 | 方法 | 输入 | 对齐设置 | 新增训练 |
-|---|---|---|---|---|---|
-| A1 | SV100-GT | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A2 | SV100-GT | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A3 | SV100-GT | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A4 | SV100-GT | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A5 | SV100-T0.5 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A6 | SV100-T0.5 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A7 | SV100-T0.5 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A8 | SV100-T0.5 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A9 | SV100-T1 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A10 | SV100-T1 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A11 | SV100-T1 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A12 | SV100-T1 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A13 | SV100-T2 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A14 | SV100-T2 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A15 | SV100-T2 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A16 | SV100-T2 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A17 | SV100-T5 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A18 | SV100-T5 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A19 | SV100-T5 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A20 | SV100-T5 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A21 | SV100-R0.5 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A22 | SV100-R0.5 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A23 | SV100-R0.5 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A24 | SV100-R0.5 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A25 | SV100-R1 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A26 | SV100-R1 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A27 | SV100-R1 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A28 | SV100-R1 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A29 | SV100-R2 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A30 | SV100-R2 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A31 | SV100-R2 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A32 | SV100-R2 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A33 | SV100-R5 | Naive | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A34 | SV100-R5 | CamP-style | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A35 | SV100-R5 | Naive + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
-| A36 | SV100-R5 | CamP-style + warm-up | 最终训练位姿与 GT | 训练相机中心拟合 Sim(3)，检查全局变换与中心残差 | 否 |
+```mermaid
+flowchart LR
+    A["Lego, GT poses"] --> B["Perturb training cameras<br/>none · T 0.5–5% · R 0.5–5°"]
+    B --> C["Train 30k steps<br/>Fixed · Naive · CamP-style<br/>± camera LR warm-up"]
+    C --> D["Raw test metrics<br/>GT test cameras"]
+    C --> E["Pose audit<br/>Sim(3) on train camera centers"]
+    E --> F["Aligned test metrics<br/>frozen network"]
+```
 
-### 对齐渲染评估（每行一次方法评估）
+- **Naive:** a 6-D SO(3) × R³ correction per training camera, optimized jointly
+  with the radiance field.
+- **CamP-style:** the same correction in a preconditioned space, δ = Pz, where P
+  whitens the projection Jacobian of each camera
+  ([CamP](https://camp-nerf.github.io/), re-implemented from the idea, not the original code).
+- **Warm-up:** the camera learning rate ramps from 1e-8 to 1e-3 over the first 2,500
+  steps instead of starting at 1e-3.
+- **Alignment diagnostic:** fit a similarity transform between GT and optimized
+  *training* camera centers, apply it to the *test* cameras, re-render. No test
+  image is used for fitting and no weight is updated.
 
-| 编号 | 位姿条件 | 方法 | 评估类型 | 测试视角 | 分辨率 | 原坐标评估 | 对齐坐标评估 | 新增训练 |
-|---|---|---|---|---|---|---|---|---|
-| E1 | SV100-GT | Fixed | 预览 | 索引 0、10、…、190，共 20 张 | 200 × 200 | 重新渲染 | 重新渲染 | 否 |
-| E2 | SV100-GT | Naive | 预览 | 索引 0、10、…、190，共 20 张 | 200 × 200 | 重新渲染 | 重新渲染 | 否 |
-| E3 | SV100-GT | CamP-style | 预览 | 索引 0、10、…、190，共 20 张 | 200 × 200 | 重新渲染 | 重新渲染 | 否 |
-| E4 | SV100-GT | Naive + warm-up | 预览 | 索引 0、10、…、190，共 20 张 | 200 × 200 | 重新渲染 | 重新渲染 | 否 |
-| E5 | SV100-GT | CamP-style + warm-up | 预览 | 索引 0、10、…、190，共 20 张 | 200 × 200 | 重新渲染 | 重新渲染 | 否 |
-| E6 | SV100-GT | Fixed | 完整 | 全部 200 张 | 800 × 800 | 复用同一 checkpoint 的已有完整评估 | 重新渲染 | 否 |
-| E7 | SV100-GT | Naive | 完整 | 全部 200 张 | 800 × 800 | 复用同一 checkpoint 的已有完整评估 | 重新渲染 | 否 |
-| E8 | SV100-GT | CamP-style | 完整 | 全部 200 张 | 800 × 800 | 复用同一 checkpoint 的已有完整评估 | 重新渲染 | 否 |
-| E9 | SV100-GT | Naive + warm-up | 完整 | 全部 200 张 | 800 × 800 | 复用同一 checkpoint 的已有完整评估 | 重新渲染 | 否 |
-| E10 | SV100-GT | CamP-style + warm-up | 完整 | 全部 200 张 | 800 × 800 | 复用同一 checkpoint 的已有完整评估 | 重新渲染 | 否 |
+Full protocol: [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 
-| 对齐评估配置项 | 设置 |
-| --- | --- |
-| 模型状态 | 冻结第 29,999 步 checkpoint，不更新网络 |
-| Sim(3) 拟合数据 | 仅 GT 与优化后的训练相机中心，不使用测试图像拟合 |
-| 变换方向 | GT 坐标 → 重建坐标 |
-| 测试相机处理 | 统一变换位置与朝向，内参不变，采样距离按拟合尺度缩放 |
-| 对照 | Fixed + GT 的恒等对齐 |
-| 图像评估指标 | fine PSNR、SSIM、LPIPS |
+## Results
+
+### 1. Pose noise breaks fixed cameras; pose optimization recovers
+
+![Renders of one test view for all five methods under 5% translation and 5° rotation noise](docs/assets/perturbation_grid.png)
+
+<img src="docs/assets/psnr_matrix.png" width="620" alt="Heatmap of test PSNR for 9 pose conditions by 5 methods">
+
+Fixed cameras win only with exact poses or 0.5% translation noise. In the
+other seven noisy conditions Naive + warm-up is best in six and 0.09 dB behind
+CamP-style + warm-up in the seventh (2° rotation).
+
+### 2. Most of the "drop from perfect poses" is coordinate drift
+
+![Ground truth, fixed-camera, naive raw and naive aligned renders with per-pixel error maps](docs/assets/hero_drift.png)
+
+The Naive render is sharp but shifted, so its error sits on object edges.
+Aligning the test camera with a Sim(3) fitted on training cameras removes most
+of it. Full 200-view evaluation, GT initialization:
+
+| Method | Raw PSNR | Sim(3)-aligned PSNR | Gain |
+| --- | ---: | ---: | ---: |
+| Fixed cameras (identity) | 27.12 | 27.12 | 0.00 |
+| Naive | 17.91 | 23.39 | +5.48 |
+| CamP-style | 19.90 | 26.04 | +6.14 |
+| Naive + warm-up | 22.71 | 26.42 | +3.71 |
+| CamP-style + warm-up | 21.08 | 25.98 | +4.90 |
+
+The pose diagnostics logged during training show the same thing: from step
+10k on, raw camera-center error stays at 0.7–1.2% of the camera radius, while
+the error left after removing one global similarity transform keeps shrinking.
+
+![Raw versus Sim(3)-aligned camera-center error over training](docs/assets/drift_over_training.png)
+
+### 3. Warm-up helps, but read it in the right frame
+
+Paired against no warm-up, warm-up improves Naive in **9/9** conditions on PSNR,
+SSIM and LPIPS (mean +4.28 dB) and CamP-style in **8/9** (mean +1.63 dB; 5%
+translation is the exception). After alignment on the GT condition, the Naive
+gain is still +3.03 dB, while the CamP-style gain disappears (−0.06 dB).
+Details: [paired analysis](artifacts/analysis/warmup/report.md),
+[alignment findings](artifacts/analysis/alignment_full/findings.md).
+
+## Limitations
+
+One scene (Lego), one seed (42). CamP-style is a controlled re-implementation.
+The warm-up changes the whole camera learning-rate schedule, so the early phase
+alone is not isolated. Full aligned rendering covers the GT condition only. The
+alignment is a diagnostic of how test metrics are measured, not a new training
+method. These results do not establish behavior on other scenes or seeds.
+
+## Quickstart
+
+Re-check the published numbers on a CPU, with no dataset or checkpoint needed:
+
+```bash
+uv sync --extra analysis
+uv run python scripts/analysis/analyze_warmup_results.py --plots
+uv run python -m unittest discover -s tests -p "test_alignment.py" -v
+```
+
+Training, resuming, auditing and aligned rendering need a CUDA GPU. See
+[docs/RUNNING.md](docs/RUNNING.md).
+
+## Repository layout
+
+```text
+poseguard/          pose-correction model, CamP-style preconditioner, Sim(3) alignment
+scripts/
+  data/             perturbed-dataset generation
+  training/         resumable, lock-protected training pipelines
+  evaluation/       pose audit and aligned rendering
+  analysis/         paired statistics and reports
+  showcase/         import server renders, build README figures
+tests/              CPU tests (alignment, orchestration, portability) and GPU tests
+artifacts/          archived configs, metrics, poses, reports for all 45 runs (index: artifacts/README.md)
+docs/               protocol, running guide, figures
+```
+
+## References
+
+- B. Mildenhall et al., *NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis*, ECCV 2020 (method and NeRF-Synthetic data).
+- M. Tancik et al., *Nerfstudio: A Modular Framework for Neural Radiance Field Development*, SIGGRAPH 2023.
+- K. Park et al., *CamP: Camera Preconditioning for Neural Radiance Fields*, SIGGRAPH Asia 2023.
+
+## License
+
+[MIT](LICENSE)
