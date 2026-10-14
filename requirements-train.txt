@@ -1,5 +1,5 @@
 # Core versions observed in the completed experiment environment.
-# Install torch/torchvision CUDA wheels separately; see REPRODUCING.md.
+# Install torch/torchvision CUDA wheels separately; see docs/RUNNING.md.
 nerfstudio==1.1.5
 torch==2.1.2
 torchvision==0.16.2

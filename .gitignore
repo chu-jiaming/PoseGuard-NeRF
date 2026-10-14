@@ -17,3 +17,6 @@ __pycache__/
 *.npy
 *.npz
 events.out.tfevents.*
+
+# Local copies of server delivery packages (large; never commit).
+/delivery/

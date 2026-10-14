@@ -1,0 +1,16 @@
+[project]
+name = "poseguard-nerf"
+version = "0.1.0"
+description = "Controlled study of camera-pose perturbation, joint pose optimization and global coordinate drift in NeRF."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+# The CPU path (archived analysis, alignment math, tests) needs only these.
+# GPU training pins live in requirements-train.txt; see docs/RUNNING.md.
+dependencies = []
+
+[project.optional-dependencies]
+analysis = ["numpy>=1.24", "matplotlib>=3.7", "pillow>=10"]
+
+[tool.uv]
+package = false

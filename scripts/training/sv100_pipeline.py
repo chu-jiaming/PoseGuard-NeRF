@@ -213,7 +213,7 @@ def main():
 
 if __name__ == '__main__':
     if any(arg in ('--help', '-h') for arg in sys.argv[1:]):
-        print('Usage: uv run python scripts/training/sv100_pipeline.py [preflight | verify CONFIG DATA | sanity CONFIG OUTPUT]\n'+PATH_HELP)
+        print('Usage: uv run --no-sync python scripts/training/sv100_pipeline.py [preflight | verify CONFIG DATA | sanity CONFIG OUTPUT]\n'+PATH_HELP)
         raise SystemExit(0)
     if len(sys.argv) == 1: main()
     elif sys.argv[1] == 'preflight':
