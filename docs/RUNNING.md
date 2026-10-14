@@ -24,6 +24,13 @@ The metric figures in `docs/assets/` can be rebuilt the same way:
 uv run python scripts/showcase/make_figures.py
 ```
 
+The GitHub social-preview card (`docs/assets/social_preview.png`, uploaded under
+Settings → Social preview) is cropped from `perturbation_grid.png`:
+
+```bash
+uv run python scripts/showcase/make_social_preview.py
+```
+
 ## 2. Training environment
 
 Training and aligned rendering need Linux, an NVIDIA CUDA GPU, `bash`, `flock`,
