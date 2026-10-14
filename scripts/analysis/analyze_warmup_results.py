@@ -10,6 +10,11 @@ METRICS = ['psnr', 'ssim', 'lpips', 'raw_rotation_deg', 'aligned_rotation_deg',
            'raw_translation_pct', 'aligned_translation_pct']
 
 
+def shown(path):
+    """Repository-relative path for reports, so they do not embed a local checkout location."""
+    return str(path.relative_to(ROOT)) if ROOT in path.parents else str(path)
+
+
 def read_rows(path):
     with (path/'summary.csv').open() as stream:
         return {(r['method'], r['case']): r for r in csv.DictReader(stream)}
@@ -21,7 +26,8 @@ def main():
     parser.add_argument('--warmup', type=Path, default=ROOT/'artifacts/analysis/warmup')
     parser.add_argument('--output', type=Path, default=ROOT/'results/published_analysis')
     parser.add_argument('--plots', action='store_true', help='Draw quality comparison; requires NumPy and Matplotlib')
-    parser.add_argument('--diagnostics', action='store_true', help='Also plot runtime traces referenced by state.json; requires original server files')
+    parser.add_argument('--diagnostics', action='store_true', help='Also plot early GT pose drift; published inputs use the archived traces, '
+                        'new runs need the diagnostics.jsonl files referenced by state.json')
     args = parser.parse_args()
     original, warmup, output = args.original.resolve(), args.warmup.resolve(), args.output.resolve()
     if output == ROOT/'artifacts' or ROOT/'artifacts' in output.parents:
@@ -63,7 +69,7 @@ def main():
         plot_drift(original, warmup, output)
     lines = ['# Warm-up 配对分析', '',
              '从输入 summary.csv 重新计算差值与条件平均；不加载模型，不重新渲染图像。',
-             '原始输入：`'+str(original)+'`；warm-up 输入：`'+str(warmup)+'`。', '',
+             '原始输入：`'+shown(original)+'`；warm-up 输入：`'+shown(warmup)+'`。', '',
              '| 方法 | PSNR 前→后 | 平均 ΔPSNR | PSNR 改善条件 | SSIM 改善条件 | LPIPS 改善条件 |',
              '|---|---:|---:|---:|---:|---:|']
     for method, values in aggregate.items():
@@ -119,12 +125,13 @@ def plot_drift(OLD, NEW, OUT):
     import matplotlib.pyplot as plt
     fig,axes=plt.subplots(2,2,figsize=(11,7),layout='constrained')
     for col,method in enumerate(('naive','camp')):
-        for directory,label,style in ((OLD,'no warm-up','--'),(NEW,'warm-up','-')):
-            state_directory = directory
+        for directory,label,style,suffix in ((OLD,'no warm-up','--',''),(NEW,'warm-up','-','_warmup')):
             if directory.parent == ROOT/'artifacts/analysis':
-                state_directory = ROOT/'artifacts/records'/directory.name
-            state=json.loads((state_directory/'state.json').read_text())
-            trace=Path(state['experiments'][method+'/SV100-GT']['attempt'])/'diagnostics.jsonl'
+                # Archived state.json files point at server paths; the GT traces are archived separately.
+                trace=ROOT/'artifacts/analysis/training_curves/diagnostics'/f'{method}{suffix}_SV100-GT.jsonl'
+            else:
+                state=json.loads((directory/'state.json').read_text())
+                trace=Path(state['experiments'][method+'/SV100-GT']['attempt'])/'diagnostics.jsonl'
             rows={d['step']:d for d in map(json.loads,trace.read_text().splitlines())}
             data=[rows[k] for k in sorted(rows) if k<=10000]
             for row,(metric,unit) in enumerate((('rotation_deg_mean','Rotation error (degrees)'),
