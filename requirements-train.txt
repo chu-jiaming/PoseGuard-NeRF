@@ -1,0 +1,11 @@
+# Core versions observed in the completed experiment environment.
+# Install torch/torchvision CUDA wheels separately; see docs/RUNNING.md.
+nerfstudio==1.1.5
+torch==2.1.2
+torchvision==0.16.2
+numpy==1.24.2
+scipy==1.10.1
+matplotlib==3.7.5
+torchmetrics==1.2.0
+tyro==1.0.16
+Pillow==10.4.0

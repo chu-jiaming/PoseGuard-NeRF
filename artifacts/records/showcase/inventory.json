@@ -1,0 +1,1044 @@
+{
+  "render_gate_passed": true,
+  "runs": [
+    {
+      "condition": "SV100-GT",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100/vanilla-nerf/2026-09-30_141114/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-GT/metrics.json"
+      ],
+      "PSNR": 27.117351531982422,
+      "expected_PSNR": 27.117,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "sha256": "c3d47101d4df1e2039ba3aa1667a7c1c98c7d12fb2e1b5d89cb1b8d31c785a6e",
+      "sha256_passed": true,
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-GT",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-GT/attempt_001/metrics.json"
+      ],
+      "PSNR": 17.908571243286133,
+      "expected_PSNR": 17.909,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-GT",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-GT/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.900388717651367,
+      "expected_PSNR": 19.9,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-GT",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-GT/attempt_001/metrics.json"
+      ],
+      "PSNR": 22.707406997680664,
+      "expected_PSNR": 22.707,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-GT",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/outputs/SV100-GT/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-GT/attempt_001/metrics.json"
+      ],
+      "PSNR": 21.07567024230957,
+      "expected_PSNR": 21.076,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T0.5",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_0p5pct/vanilla-nerf/2026-09-30_170408/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-T0.5/metrics.json"
+      ],
+      "PSNR": 23.16393280029297,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_0p5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T0.5",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 17.72048568725586,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_0p5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T0.5",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.106420516967773,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_0p5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T0.5",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 21.728418350219727,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_0p5pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T0.5",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/outputs/SV100-T0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 20.58088493347168,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_0p5pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T1",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_tnoise_1pct/vanilla-nerf/2026-09-30_195553/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-T1/metrics.json"
+      ],
+      "PSNR": 20.352632522583008,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_tnoise_1pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T1",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T1/attempt_001/metrics.json"
+      ],
+      "PSNR": 15.900127410888672,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_tnoise_1pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T1",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T1/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.826087951660156,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_tnoise_1pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T1",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T1/attempt_001/metrics.json"
+      ],
+      "PSNR": 23.830036163330078,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_tnoise_1pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T1",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/outputs/SV100-T1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T1/attempt_001/metrics.json"
+      ],
+      "PSNR": 20.539615631103516,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_tnoise_1pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T2",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_2pct/vanilla-nerf/2026-09-30_224750/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-T2/metrics.json"
+      ],
+      "PSNR": 17.410005569458008,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_2pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T2",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T2/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.844139099121094,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_2pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T2",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T2/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.009138107299805,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_2pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T2",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T2/attempt_001/metrics.json"
+      ],
+      "PSNR": 20.140737533569336,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_2pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T2",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/outputs/SV100-T2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T2/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.7944278717041,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_2pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T5",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_tnoise_5pct/vanilla-nerf/2026-10-01_013952/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-T5/metrics.json"
+      ],
+      "PSNR": 14.144984245300293,
+      "expected_PSNR": 14.145,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "sha256": "89134af0a04380cea1744aa189003cc7a2b070a0ab636b2db8508254992b1795",
+      "sha256_passed": true,
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T5",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-T5/attempt_001/metrics.json"
+      ],
+      "PSNR": 17.533849716186523,
+      "expected_PSNR": 17.534,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T5",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-T5/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.71722412109375,
+      "expected_PSNR": 19.717,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T5",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-T5/attempt_001/metrics.json"
+      ],
+      "PSNR": 22.680654525756836,
+      "expected_PSNR": 22.681,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-T5",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/outputs/SV100-T5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-T5/attempt_001/metrics.json"
+      ],
+      "PSNR": 18.730865478515625,
+      "expected_PSNR": 18.731,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_tnoise_5pct",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R0.5",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_0p5deg/vanilla-nerf/2026-10-01_043150/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-R0.5/metrics.json"
+      ],
+      "PSNR": 20.094165802001953,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_0p5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R0.5",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 20.562286376953125,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_0p5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R0.5",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 18.255605697631836,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_0p5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R0.5",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 23.217727661132812,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_0p5deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R0.5",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/outputs/SV100-R0.5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R0.5/attempt_001/metrics.json"
+      ],
+      "PSNR": 20.347471237182617,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_0p5deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R1",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_1deg/vanilla-nerf/2026-10-01_072344/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-R1/metrics.json"
+      ],
+      "PSNR": 17.114395141601562,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R1",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R1/attempt_001/metrics.json"
+      ],
+      "PSNR": 15.528212547302246,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R1",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R1/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.700990676879883,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R1",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R1/attempt_001/metrics.json"
+      ],
+      "PSNR": 21.86933135986328,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R1",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/outputs/SV100-R1/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R1/attempt_001/metrics.json"
+      ],
+      "PSNR": 18.38273811340332,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_1deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R2",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_2deg/vanilla-nerf/2026-10-01_101553/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-R2/metrics.json"
+      ],
+      "PSNR": 14.811619758605957,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_2deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R2",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R2/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.13628387451172,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_2deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R2",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R2/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.151582717895508,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_2deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R2",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R2/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.607765197753906,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_2deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R2",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/outputs/SV100-R2/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R2/attempt_001/metrics.json"
+      ],
+      "PSNR": 19.696561813354492,
+      "expected_PSNR": null,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_2deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": false,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R5",
+      "method": "fixed",
+      "config": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/outputs/lego_sv100_rnoise_5deg/vanilla-nerf/2026-10-01_130748/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/SV100-R5/metrics.json"
+      ],
+      "PSNR": 12.007059097290039,
+      "expected_PSNR": 12.007,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R5",
+      "method": "naive",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/naive/SV100-R5/attempt_001/metrics.json"
+      ],
+      "PSNR": 17.4700870513916,
+      "expected_PSNR": 17.47,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R5",
+      "method": "camp",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100/experiments/camp/SV100-R5/attempt_001/metrics.json"
+      ],
+      "PSNR": 15.084413528442383,
+      "expected_PSNR": 15.084,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_5deg",
+      "warmup_steps": 0,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R5",
+      "method": "naive_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-naive/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/naive/SV100-R5/attempt_001/metrics.json"
+      ],
+      "PSNR": 18.333772659301758,
+      "expected_PSNR": 18.334,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_5deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    },
+    {
+      "condition": "SV100-R5",
+      "method": "camp_warmup",
+      "config": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/config.yml",
+      "checkpoint": "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/outputs/SV100-R5/poseguard-camp/run/nerfstudio_models/step-000029999.ckpt",
+      "metrics": [
+        "/root/workspace/poseguard-nerf/results/poseopt_sv100_warmup2500/experiments/camp/SV100-R5/attempt_001/metrics.json"
+      ],
+      "PSNR": 16.24745750427246,
+      "expected_PSNR": 16.247,
+      "verification_passed": true,
+      "data": "/root/workspace/data/nerf_synthetic/lego_sv100_rnoise_5deg",
+      "warmup_steps": 2500,
+      "seed": "42",
+      "steps": "30000",
+      "reference_psnr_checked": true,
+      "identification_unique": true,
+      "data_split_counts": {
+        "train": 100,
+        "val": 100,
+        "test": 200
+      }
+    }
+  ]
+}

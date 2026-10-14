@@ -7,3 +7,16 @@ __pycache__/
 /logs
 /results
 /.sv100_pipeline.lock
+
+.venv
+
+# Large experiment inputs and outputs stay on the training server.
+/data/
+/datasets/
+*.ckpt
+*.npy
+*.npz
+events.out.tfevents.*
+
+# Local copies of server delivery packages (large; never commit).
+/delivery/

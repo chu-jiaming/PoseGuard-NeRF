@@ -1,104 +1,148 @@
 # PoseGuard-NeRF
 
-**相机位姿误差如何影响 NeRF？学习率 warm-up 能改善联合优化吗？评估坐标系又会怎样改变结论？**
+**When does joint camera-pose optimization help NeRF, and when does it just move the world?**
 
-基于 Nerfstudio 1.1.5 vanilla-NeRF 的受控实验项目，实现 Naive 与 CamP-style 相机位姿优化，完成扰动敏感性、学习率 warm-up 对照及全局坐标漂移诊断。
+[![tests](https://github.com/chu-jiaming/PoseGuard-NeRF/actions/workflows/tests.yml/badge.svg)](https://github.com/chu-jiaming/PoseGuard-NeRF/actions/workflows/tests.yml)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![Nerfstudio](https://img.shields.io/badge/Nerfstudio-1.1.5-6C63FF?style=flat-square)
+![License: MIT](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)
 
-Lego 单场景 · 100 训练视角 · seed 42 · 每次 30,000 步 · **45 次训练**（9 fixed + 18 无 warm-up + 18 warm-up）。这是单场景案例研究，未进行跨种子显著性检验。CamP-style 是外参预条件机制的受控实现，区别于官方完整 CamP 设置。
+English | [中文](README.zh-CN.md)
 
-## 主要发现
+<p align="center">
+  <img src="docs/assets/t5_side_by_side.gif" width="560" alt="Orbit renders of the Lego scene trained with 5% camera translation noise: fixed cameras on the left are blurry, joint pose optimization with warm-up on the right is sharp">
+  <br>
+  <sub>Lego with 5% translation noise on every training camera. Left: fixed cameras, 14.1 dB.
+  Right: joint pose optimization with a camera learning-rate warm-up, 22.7 dB. Same data, same 30k steps.</sub>
+</p>
 
-- **固定相机对位姿误差敏感**：GT 为 27.12 dB，T5% 为 14.14 dB，R5° 为 12.01 dB。
-- **相机学习率 warm-up 改善多数条件**：Naive 在 9/9 条件的 PSNR、SSIM、LPIPS 均改善，条件平均 PSNR +4.28 dB；CamP-style 为 8/9，平均 +1.63 dB，T5% 是反例。
-- **原坐标测试指标受到全局漂移影响**：GT 条件下，保持模型冻结、用训练相机中心拟合 Sim(3) 后，Naive 从 17.91 提升至 23.39 dB，CamP-style 从 19.90 提升至 26.04 dB。
-- **warm-up 的收益需要结合评估协议解释**：GT 对齐后 Naive 仍提升 3.03 dB；CamP-style 变化为 −0.06 dB。对齐后残余差距的具体成因尚未确定。
+A controlled study of NeRF under noisy camera poses: **45 training runs**
+(9 pose-noise levels × 5 methods) on Nerfstudio's vanilla-NeRF, plus pose audits
+and a Sim(3) alignment diagnostic that separates *worse reconstruction* from
+*a reconstruction that is fine but sits in a shifted coordinate frame*.
 
-![Warm-up 配对结果](artifacts/warmup/quality_comparison.png)
+## TL;DR
 
-## 实验设计与结果
+- **Small pose errors wreck fixed-camera NeRF.** Test PSNR falls from 27.1 dB to
+  14.1 dB at 5% translation noise and to 12.0 dB at 5° rotation noise.
+- **Joint pose optimization recovers much of it,** and a 2,500-step camera
+  learning-rate warm-up makes the naive version better in **9/9** conditions
+  (+4.3 dB on average; at 5% translation noise, 14.1 → 22.7 dB).
+- **But turning it on from perfect poses *lowers* PSNR from 27.1 to 17.9 dB.**
+  The diagnosis: the reconstruction drifts as a whole. A Sim(3) fitted only on
+  training camera centers, with the network frozen, recovers **+5.5 dB** (Naive)
+  and **+6.1 dB** (CamP-style). Raw test metrics conflate scene quality with
+  global coordinate drift.
 
-只扰动训练外参，图像、内参、验证和测试划分保持不变。9 个条件包括 GT、平移 T0.5/1/2/5%、旋转 R0.5/1/2/5°。所有方法共享 coarse/fine RGB MSE，无 GT 位姿监督、位姿正则或固定锚点。
+## Method
 
-| 方法 | 位姿参数 | 相机学习率日程 |
-|---|---|---|
-| Fixed | 固定输入相机 | 不更新 |
-| Naive | 直接学习六维 SO3×R3 修正 | 1e-3 → 1e-4 |
-| CamP-style | 固定投影 Jacobian 预条件矩阵 × 六维 latent | 同上 |
-| 两种 warm-up 变体 | 分别沿用对应参数化 | 前 2500 步从 1e-8 渐增至 1e-3，再衰减 |
-
-warm-up 从第一步更新相机，并非先冻结后启动；后期衰减日程也随之改变。因此实验检验的是整个学习率日程，未单独隔离早期阶段的因果作用。
-
-原坐标下，200 张 800×800 测试图的 PSNR（dB）：
-
-| 条件 | Fixed | Naive | CamP-style | Naive + warm-up | CamP-style + warm-up |
-|---|---:|---:|---:|---:|---:|
-| GT | 27.12 | 17.91 | 19.90 | 22.71 | 21.08 |
-| T0.5% | 23.16 | 17.72 | 16.11 | 21.73 | 20.58 |
-| T1% | 20.35 | 15.90 | 16.83 | 23.83 | 20.54 |
-| T2% | 17.41 | 16.84 | 19.01 | 20.14 | 19.79 |
-| T5% | 14.14 | 17.53 | 19.72 | 22.68 | 18.73 |
-| R0.5° | 20.09 | 20.56 | 18.26 | 23.22 | 20.35 |
-| R1° | 17.11 | 15.53 | 16.70 | 21.87 | 18.38 |
-| R2° | 14.81 | 16.14 | 19.15 | 19.61 | 19.70 |
-| R5° | 12.01 | 17.47 | 15.08 | 18.33 | 16.25 |
-
-[原始指标](artifacts/historical/results/poseopt_sv100/summary.csv) · [Warm-up 指标](artifacts/warmup/summary.csv) · [逐条件配对差值](artifacts/warmup/paired_metrics.csv)
-
-## 评估诊断：坐标漂移与残余差距
-
-联合优化可使相机和场景一起改变坐标系。我们仅用训练相机中心拟合一个从 GT 到重建坐标的 Sim(3)，统一变换测试相机位置与朝向，并缩放采样距离。不使用测试图像拟合、不更新网络。
-
-| GT 条件 | 原坐标 PSNR | 对齐后 PSNR | 对齐后与 Fixed 差值 |
-|---|---:|---:|---:|
-| Fixed | 27.12 | 27.12 | 0.00 |
-| Naive | 17.91 | 23.39 | −3.73 |
-| CamP-style | 19.90 | 26.04 | −1.08 |
-| Naive + warm-up | 22.71 | 26.42 | −0.70 |
-| CamP-style + warm-up | 21.08 | 25.98 | −1.14 |
-
-完整诊断使用全部 200 张 800×800 测试图，Fixed 恒等对齐控制通过。另有 20 张 200×200 的成对预览，不能混用两种分辨率的数字。
-
-![GT 完整测试集对齐诊断](artifacts/alignment_gt_full/metrics_comparison.png)
-
-下面是测试视角 0 的预览对比；仅用于定性展示：
-
-![原坐标与对齐后预览](artifacts/alignment_gt_preview/comparison_000.png)
-
-[完整诊断结论](artifacts/alignment_gt_full/findings.md) · [评估协议](ALIGNMENT_DIAGNOSTIC.md)
-
-**解释边界：** 全条件位姿审计覆盖 36 组优化结果，渲染对齐仅覆盖 GT 的五种设置。中心拟合不保证朝向或图像误差最优；PSNR 差值不能严格分解各原因的误差占比。本项目不宣称官方 CamP 的效果、跨场景/跨种子稳定性或 SOTA。
-
-## 查看与复现
-
-阅读本仓库的表格与图片不需要 GPU 或原始数据。发布档案位于 [artifacts/](artifacts/README.md)，包含小型记录、精选图及 SHA-256 清单；不包含原始数据、模型权重、TensorBoard 或完整渲染数组。
-
-重新训练需要 Linux、CUDA GPU、NeRF-Synthetic Lego 数据和兼容环境。环境、数据准备、执行顺序见 [REPRODUCING.md](REPRODUCING.md)。在已配置环境中：
-
-```bash
-export POSEGUARD_DATA=/absolute/path/to/nerf_synthetic
-PYTHONPATH=. python -m unittest discover -s tests -v
-# 已完成 Fixed 基线后检查位姿流水线：
-bash scripts/run_pose_optimization_pipeline.sh --preflight
-bash scripts/run_pose_optimization_pipeline.sh --dry-run
+```mermaid
+flowchart LR
+    B["Perturb Lego training cameras<br/>none · T 0.5–5% · R 0.5–5°"] --> C["Train 30k steps<br/>Fixed · Naive · CamP-style<br/>± LR warm-up"]
+    C --> D["Raw test metrics"]
+    C --> E["Pose audit<br/>Sim(3) on train cameras"]
+    E --> F["Aligned test metrics<br/>frozen network"]
 ```
 
-本次整理的检查与限制见 [VALIDATION.md](VALIDATION.md)。
+- **Naive:** a 6-D SO(3) × R³ correction per training camera, optimized jointly
+  with the radiance field.
+- **CamP-style:** the same correction in a preconditioned space, δ = Pz, where P
+  whitens the projection Jacobian of each camera
+  ([CamP](https://camp-nerf.github.io/), re-implemented from the idea, not the original code).
+- **Warm-up:** the camera learning rate ramps from 1e-8 to 1e-3 over the first 2,500
+  steps instead of starting at 1e-3.
+- **Alignment diagnostic:** fit a similarity transform between GT and optimized
+  *training* camera centers, apply it to the *test* cameras, re-render. No test
+  image is used for fitting and no weight is updated.
 
-脚本使用当前激活的 Python 环境。新运行会记录自己的配置和指纹；发布档案中的原工作区绝对路径仅用于历史追溯，不能当作新机器上的恢复入口。
+Full protocol: [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 
-## 仓库导航
+## Results
 
-| 路径 | 内容 |
-|---|---|
-| [METHODS.md](METHODS.md) | 参数化、代理 Jacobian、预条件和训练定义 |
-| [WARMUP_EXPERIMENTS.md](WARMUP_EXPERIMENTS.md) | Warm-up 日程、运行与恢复 |
-| [DATA_FLOW.md](DATA_FLOW.md) | 输入、训练、评估、发布档案的数据流 |
-| [POSE_OPTIMIZATION.md](POSE_OPTIMIZATION.md) | 串行编排、checkpoint 恢复和故障处理 |
-| [PROJECT_SUMMARY.md](PROJECT_SUMMARY.md) | 阶段总结、简历描述和面试讲述 |
-| `poseguard/`、`scripts/`、`tests/` | 模型、实验与诊断入口、几何和编排测试 |
+### 1. Pose noise breaks fixed cameras; pose optimization recovers
 
-## Reference
+![Renders of one test view for all five methods under 5% translation and 5° rotation noise](docs/assets/perturbation_grid.png)
 
-Park et al., **CamP: Camera Preconditioning for Neural Radiance Fields**, SIGGRAPH Asia 2023. [Paper](https://arxiv.org/abs/2308.10902) · [Project](https://camp-nerf.github.io/).
+<img src="docs/assets/psnr_matrix.png" width="620" alt="Heatmap of test PSNR for 9 pose conditions by 5 methods">
 
-本项目依赖 Nerfstudio，数据采用 NeRF-Synthetic；第三方代码、数据和论文各自遵循原有条款。本仓库尚未指定开源许可证。
+Fixed cameras win only with exact poses or 0.5% translation noise. In the
+other seven noisy conditions Naive + warm-up is best in six and 0.09 dB behind
+CamP-style + warm-up in the seventh (2° rotation).
+
+### 2. Most of the "drop from perfect poses" is coordinate drift
+
+![Ground truth, fixed-camera, naive raw and naive aligned renders with per-pixel error maps](docs/assets/hero_drift.png)
+
+The Naive render is sharp but shifted, so its error sits on object edges.
+Aligning the test camera with a Sim(3) fitted on training cameras removes most
+of it. Full 200-view evaluation, GT initialization:
+
+| Method | Raw PSNR | Sim(3)-aligned PSNR | Gain |
+| --- | ---: | ---: | ---: |
+| Fixed cameras (identity) | 27.12 | 27.12 | 0.00 |
+| Naive | 17.91 | 23.39 | +5.48 |
+| CamP-style | 19.90 | 26.04 | +6.14 |
+| Naive + warm-up | 22.71 | 26.42 | +3.71 |
+| CamP-style + warm-up | 21.08 | 25.98 | +4.90 |
+
+The pose diagnostics logged during training show the same thing: from step
+10k on, raw camera-center error stays at 0.7–1.2% of the camera radius, while
+the error left after removing one global similarity transform keeps shrinking.
+
+![Raw versus Sim(3)-aligned camera-center error over training](docs/assets/drift_over_training.png)
+
+### 3. Warm-up helps, but read it in the right frame
+
+Paired against no warm-up, warm-up improves Naive in **9/9** conditions on PSNR,
+SSIM and LPIPS (mean +4.28 dB) and CamP-style in **8/9** (mean +1.63 dB; 5%
+translation is the exception). After alignment on the GT condition, the Naive
+gain is still +3.03 dB, while the CamP-style gain disappears (−0.06 dB).
+Details: [paired analysis](artifacts/analysis/warmup/report.md),
+[alignment findings](artifacts/analysis/alignment_full/findings.md).
+
+## Limitations
+
+One scene (Lego), one seed (42). CamP-style is a controlled re-implementation.
+The warm-up changes the whole camera learning-rate schedule, so the early phase
+alone is not isolated. Full aligned rendering covers the GT condition only. The
+alignment is a diagnostic of how test metrics are measured, not a new training
+method. These results do not establish behavior on other scenes or seeds.
+
+## Quickstart
+
+Re-check the published numbers on a CPU, with no dataset or checkpoint needed:
+
+```bash
+uv sync --extra analysis
+uv run python scripts/analysis/analyze_warmup_results.py --plots
+uv run python -m unittest discover -s tests -p "test_alignment.py" -v
+```
+
+Training, resuming, auditing and aligned rendering need a CUDA GPU. See
+[docs/RUNNING.md](docs/RUNNING.md).
+
+## Repository layout
+
+```text
+poseguard/          pose-correction model, CamP-style preconditioner, Sim(3) alignment
+scripts/
+  data/             perturbed-dataset generation
+  training/         resumable, lock-protected training pipelines
+  evaluation/       pose audit and aligned rendering
+  analysis/         paired statistics and reports
+  showcase/         import server renders, build README figures
+tests/              CPU tests (alignment, orchestration, portability) and GPU tests
+artifacts/          archived configs, metrics, poses, reports for all 45 runs (index: artifacts/README.md)
+docs/               protocol, running guide, figures
+```
+
+## References
+
+- B. Mildenhall et al., *NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis*, ECCV 2020 (method and NeRF-Synthetic data).
+- M. Tancik et al., *Nerfstudio: A Modular Framework for Neural Radiance Field Development*, SIGGRAPH 2023.
+- K. Park et al., *CamP: Camera Preconditioning for Neural Radiance Fields*, SIGGRAPH Asia 2023.
+
+## License
+
+[MIT](LICENSE)
