@@ -126,7 +126,7 @@ uv run python -m unittest discover -s tests -p "test_alignment.py" -v
 ```
 
 The seven final checkpoints behind the GT alignment table and the T5 comparison
-are on the [v1.0.0 release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0),
+are on the [release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0),
 with SHA-256 sums and loading steps. Training, resuming, auditing and aligned
 rendering need a CUDA GPU. See [docs/RUNNING.md](docs/RUNNING.md).
 

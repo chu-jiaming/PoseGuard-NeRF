@@ -43,7 +43,7 @@ README 中的渲染图和视频由服务器在同一批 checkpoint 上推理生�
 
 在仓库根目录运行 `uv run python scripts/analysis/analyze_warmup_results.py`，可从归档 CSV 重新计算配对统计，默认输出到 `results/published_analysis/`。加 `--plots` 可重画质量对比图，加 `--diagnostics` 可用 `analysis/training_curves/diagnostics/` 中归档的 GT 轨迹重画早期漂移图，两者都需要 NumPy 和 Matplotlib。
 
-发布档案不含原始数据、checkpoint、TensorBoard event 文件、原始渲染数组或完整训练日志；TensorBoard 标量只保留了精简后的 `analysis/training_curves/tb_scalars.csv`。重新渲染需要原模型和数据，7 个最终 checkpoint 见 [v1.0.0 Release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0)。对齐评估使用全部 200 张 800×800 测试图。
+发布档案不含原始数据、checkpoint、TensorBoard event 文件、原始渲染数组或完整训练日志；TensorBoard 标量只保留了精简后的 `analysis/training_curves/tb_scalars.csv`。重新渲染需要原模型和数据，7 个最终 checkpoint 见 [Release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0)。对齐评估使用全部 200 张 800×800 测试图。
 
 Warm-up 阶段报告早于对齐诊断，其中 GT 对齐的后续工作已完成，多种子实验未执行；后续对齐解释见对应 findings。
 
