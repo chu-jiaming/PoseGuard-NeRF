@@ -17,10 +17,11 @@ English | [中文](README.zh-CN.md)
   Right: joint pose optimization with a camera learning-rate warm-up, 22.7 dB. Same data, same 30k steps.</sub>
 </p>
 
-A controlled study of NeRF under noisy camera poses: **45 training runs**
-(9 pose-noise levels × 5 methods) on Nerfstudio's vanilla-NeRF, plus pose audits
-and a Sim(3) alignment diagnostic that separates *worse reconstruction* from
-*a reconstruction that is fine but sits in a shifted coordinate frame*.
+A side-by-side comparison of NeRF under noisy camera poses, with everything
+else held fixed: **45 training runs** (9 pose-noise levels × 5 methods) on
+Nerfstudio's vanilla-NeRF, plus pose audits and a Sim(3) alignment diagnostic
+that separates *worse reconstruction* from *a reconstruction that is fine but
+sits in a shifted coordinate frame*.
 
 ## TL;DR
 
@@ -48,8 +49,8 @@ flowchart LR
 - **Naive:** a 6-D SO(3) × R³ correction per training camera, optimized jointly
   with the radiance field.
 - **CamP-style:** the same correction in a preconditioned space, δ = Pz, where P
-  whitens the projection Jacobian of each camera
-  ([CamP](https://camp-nerf.github.io/), re-implemented from the idea, not the original code).
+  whitens the projection Jacobian of each camera (re-implemented following
+  [CamP](https://camp-nerf.github.io/)).
 - **Warm-up:** the camera learning rate ramps from 1e-8 to 1e-3 over the first 2,500
   steps instead of starting at 1e-3.
 - **Alignment diagnostic:** fit a similarity transform between GT and optimized
@@ -109,15 +110,12 @@ Details: [paired analysis](artifacts/analysis/warmup/report.md),
 
 ## Limitations
 
-One scene (Lego), one seed (42). CamP-style is a controlled re-implementation.
-The warm-up changes the whole camera learning-rate schedule, so the early phase
-alone is not isolated. Full aligned rendering covers the GT condition only. The
-alignment is a diagnostic of how test metrics are measured, not a new training
-method. These results do not establish behavior on other scenes or seeds.
+1. One scene (Lego), one seed (42).
+2. The warm-up changes the whole camera learning-rate schedule, so the early
+   phase alone is not isolated.
+3. Full aligned rendering covers the GT condition only.
 
 ## Quickstart
-
-Re-check the published numbers on a CPU, with no dataset or checkpoint needed:
 
 ```bash
 uv sync --extra analysis
@@ -126,9 +124,10 @@ uv run python -m unittest discover -s tests -p "test_alignment.py" -v
 ```
 
 The seven final checkpoints behind the GT alignment table and the T5 comparison
-are on the [release](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0),
-with SHA-256 sums and loading steps. Training, resuming, auditing and aligned
-rendering need a CUDA GPU. See [docs/RUNNING.md](docs/RUNNING.md).
+are published on the [release page](https://github.com/chu-jiaming/PoseGuard-NeRF/releases/tag/v1.0.0).
+
+Training, resuming, auditing and aligned rendering need a CUDA GPU. See
+[docs/RUNNING.md](docs/RUNNING.md).
 
 ## Repository layout
 
