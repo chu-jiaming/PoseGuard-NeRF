@@ -17,11 +17,10 @@ English | [中文](README.zh-CN.md)
   Right: joint pose optimization with a camera learning-rate warm-up, 22.7 dB. Same data, same 30k steps.</sub>
 </p>
 
-A side-by-side comparison of NeRF under noisy camera poses, with everything
-else held fixed: **45 training runs** (9 pose-noise levels × 5 methods) on
-Nerfstudio's vanilla-NeRF, plus pose audits and a Sim(3) alignment diagnostic
-that separates *worse reconstruction* from *a reconstruction that is fine but
-sits in a shifted coordinate frame*.
+A controlled experiment on NeRF under noisy camera poses: **45 training runs**
+(9 pose-noise levels × 5 methods) on Nerfstudio's vanilla-NeRF, plus pose audits
+and a Sim(3) alignment diagnostic that separates *worse reconstruction* from
+*a reconstruction that is fine but sits in a shifted coordinate frame*.
 
 ## TL;DR
 
